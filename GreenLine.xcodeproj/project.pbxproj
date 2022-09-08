@@ -31,6 +31,11 @@
 		07D4BFDE28C9C3080052C4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D4BFDD28C9C3080052C4E8 /* Main.storyboard */; };
 		07D4BFE228C9C5B80052C4E8 /* AddScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFE028C9C5B80052C4E8 /* AddScheduleView.swift */; };
 		07D4BFE328C9C5B80052C4E8 /* AddScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */; };
+		07D4BFEA28CA66820052C4E8 /* AbsencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFE928CA66810052C4E8 /* AbsencesViewController.swift */; };
+		07D4BFEC28CA66A20052C4E8 /* AbsencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFEB28CA66A20052C4E8 /* AbsencesView.swift */; };
+		07D4BFEF28CA66E50052C4E8 /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFEE28CA66E50052C4E8 /* PayView.swift */; };
+		07D4BFF128CA66F60052C4E8 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF028CA66F60052C4E8 /* PayViewController.swift */; };
+		07D4BFF328CA89BB0052C4E8 /* PayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF228CA89BA0052C4E8 /* PayTableViewCell.swift */; };
 		2191FA62D41BA1CA01401239 /* Pods_GreenLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3BDF8EC6ECC40F9784448D /* Pods_GreenLineTests.framework */; };
 		73F10ED0ADDFB25C98220F6F /* Pods_GreenLine_GreenLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33BDAA88DA9AD753425A0F6 /* Pods_GreenLine_GreenLineUITests.framework */; };
 		D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9461310289AE2AB00FBA5D5 /* EnterPasswordViewController.swift */; };
@@ -112,6 +117,11 @@
 		07D4BFDD28C9C3080052C4E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		07D4BFE028C9C5B80052C4E8 /* AddScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleView.swift; sourceTree = "<group>"; };
 		07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleViewController.swift; sourceTree = "<group>"; };
+		07D4BFE928CA66810052C4E8 /* AbsencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesViewController.swift; sourceTree = "<group>"; };
+		07D4BFEB28CA66A20052C4E8 /* AbsencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesView.swift; sourceTree = "<group>"; };
+		07D4BFEE28CA66E50052C4E8 /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
+		07D4BFF028CA66F60052C4E8 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		07D4BFF228CA89BA0052C4E8 /* PayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTableViewCell.swift; sourceTree = "<group>"; };
 		09E2A468E756028997096DC4 /* Pods-GreenLine-GreenLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine-GreenLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine-GreenLineUITests/Pods-GreenLine-GreenLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DBD33F2CBC893130D952B43 /* Pods-GreenLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine/Pods-GreenLine.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5D8F03DC1629676C39A1B2 /* Pods_GreenLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +251,25 @@
 				07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */,
 			);
 			path = "My Schedule - Add";
+			sourceTree = "<group>";
+		};
+		07D4BFE828CA664B0052C4E8 /* More - Absences */ = {
+			isa = PBXGroup;
+			children = (
+				07D4BFE928CA66810052C4E8 /* AbsencesViewController.swift */,
+				07D4BFEB28CA66A20052C4E8 /* AbsencesView.swift */,
+			);
+			path = "More - Absences";
+			sourceTree = "<group>";
+		};
+		07D4BFED28CA66C80052C4E8 /* More - Pay */ = {
+			isa = PBXGroup;
+			children = (
+				07D4BFEE28CA66E50052C4E8 /* PayView.swift */,
+				07D4BFF028CA66F60052C4E8 /* PayViewController.swift */,
+				07D4BFF228CA89BA0052C4E8 /* PayTableViewCell.swift */,
+			);
+			path = "More - Pay";
 			sourceTree = "<group>";
 		};
 		14EC624D5B6D524E46470AB8 /* Frameworks */ = {
@@ -386,6 +415,8 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07D4BFED28CA66C80052C4E8 /* More - Pay */,
+				07D4BFE828CA664B0052C4E8 /* More - Absences */,
 				07D4BFDF28C9C59B0052C4E8 /* My Schedule - Add */,
 				07D4BFA328C33CB50052C4E8 /* Schedule - Shifts */,
 				07D4BFA228C33CAA0052C4E8 /* Main - More */,
@@ -736,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9EBEC922896EC85005C0D49 /* UIStoryboard.swift in Sources */,
+				07D4BFF128CA66F60052C4E8 /* PayViewController.swift in Sources */,
 				07D4BFB028C33D360052C4E8 /* ShiftsView.swift in Sources */,
 				D9461313289AE2C800FBA5D5 /* EnterPasswordView.swift in Sources */,
 				07D4BFBD28C7DF0A0052C4E8 /* ApiClient.swift in Sources */,
@@ -747,14 +779,17 @@
 				07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */,
 				D9EBEC852896D6E5005C0D49 /* UIColor.swift in Sources */,
 				D946131F289B066400FBA5D5 /* ScheduleTableViewCell.swift in Sources */,
+				07D4BFEC28CA66A20052C4E8 /* AbsencesView.swift in Sources */,
 				D9EBEC202896C1C2005C0D49 /* AppDelegate.swift in Sources */,
 				D946132E289D9A3C00FBA5D5 /* CalendarView.swift in Sources */,
 				D9EBEC882896E95D005C0D49 /* ChooseYourTeamView.swift in Sources */,
 				07D4BFAE28C33D240052C4E8 /* ShiftsViewController.swift in Sources */,
 				D9EBEC8C2896E9BD005C0D49 /* ChooseYourTeamTableViewCell.swift in Sources */,
+				07D4BFF328CA89BB0052C4E8 /* PayTableViewCell.swift in Sources */,
 				D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */,
 				07D4BFD128C7EEBA0052C4E8 /* Utils.swift in Sources */,
 				07D4BFD328C7F02A0052C4E8 /* UserEmailViewModel.swift in Sources */,
+				07D4BFEF28CA66E50052C4E8 /* PayView.swift in Sources */,
 				07D4BFC128C7E1220052C4E8 /* SessionManager.swift in Sources */,
 				07D4BFC528C7E75E0052C4E8 /* LoginRepository.swift in Sources */,
 				D946132F289D9A3C00FBA5D5 /* DateCollectionViewCell.swift in Sources */,
@@ -769,6 +804,7 @@
 				07D4BFAA28C33D070052C4E8 /* MoreView.swift in Sources */,
 				D9461316289AF83800FBA5D5 /* MainTabBarView.swift in Sources */,
 				07D4BFAC28C33D140052C4E8 /* MoreViewController.swift in Sources */,
+				07D4BFEA28CA66820052C4E8 /* AbsencesViewController.swift in Sources */,
 				D9EBEC902896EC2C005C0D49 /* UITableView.swift in Sources */,
 				07D4BFD528C7F0980052C4E8 /* String.swift in Sources */,
 				D9EBEC5B2896C516005C0D49 /* GetUserEmailView.swift in Sources */,

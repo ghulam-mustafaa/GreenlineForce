@@ -45,6 +45,8 @@ class AddScheduleView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        bottomView.setCornerRadius(16, forCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+        bottomView.clipsToBounds = true
         [approveBGView, commentBGView, absenceTypeBGView, selectDatesBGView].forEach({
             $0?.setBorderColor(color: .textFieldBorderColor)
             $0?.setBorderWidth(width: 1)
