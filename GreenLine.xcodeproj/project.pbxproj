@@ -28,6 +28,8 @@
 		07D4BFD128C7EEBA0052C4E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFD028C7EEBA0052C4E8 /* Utils.swift */; };
 		07D4BFD328C7F02A0052C4E8 /* UserEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFD228C7F02A0052C4E8 /* UserEmailViewModel.swift */; };
 		07D4BFD528C7F0980052C4E8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFD428C7F0980052C4E8 /* String.swift */; };
+		07D4BFDC28C9C2E30052C4E8 /* My Schedule - Add in Resources */ = {isa = PBXBuildFile; fileRef = 07D4BFDB28C9C2E30052C4E8 /* My Schedule - Add */; };
+		07D4BFDE28C9C3080052C4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D4BFDD28C9C3080052C4E8 /* Main.storyboard */; };
 		2191FA62D41BA1CA01401239 /* Pods_GreenLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3BDF8EC6ECC40F9784448D /* Pods_GreenLineTests.framework */; };
 		73F10ED0ADDFB25C98220F6F /* Pods_GreenLine_GreenLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33BDAA88DA9AD753425A0F6 /* Pods_GreenLine_GreenLineUITests.framework */; };
 		D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9461310289AE2AB00FBA5D5 /* EnterPasswordViewController.swift */; };
@@ -44,7 +46,6 @@
 		D9461332289D9A3C00FBA5D5 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D946132D289D9A3C00FBA5D5 /* DateCollectionViewCell.xib */; };
 		D9EBEC202896C1C2005C0D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EBEC1F2896C1C2005C0D49 /* AppDelegate.swift */; };
 		D9EBEC222896C1C2005C0D49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EBEC212896C1C2005C0D49 /* SceneDelegate.swift */; };
-		D9EBEC272896C1C2005C0D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EBEC252896C1C2005C0D49 /* Main.storyboard */; };
 		D9EBEC292896C1C4005C0D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9EBEC282896C1C4005C0D49 /* Assets.xcassets */; };
 		D9EBEC2C2896C1C4005C0D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EBEC2A2896C1C4005C0D49 /* LaunchScreen.storyboard */; };
 		D9EBEC372896C1C4005C0D49 /* GreenLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EBEC362896C1C4005C0D49 /* GreenLineTests.swift */; };
@@ -107,6 +108,8 @@
 		07D4BFD028C7EEBA0052C4E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		07D4BFD228C7F02A0052C4E8 /* UserEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEmailViewModel.swift; sourceTree = "<group>"; };
 		07D4BFD428C7F0980052C4E8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		07D4BFDB28C9C2E30052C4E8 /* My Schedule - Add */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "My Schedule - Add"; sourceTree = "<group>"; };
+		07D4BFDD28C9C3080052C4E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		09E2A468E756028997096DC4 /* Pods-GreenLine-GreenLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine-GreenLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine-GreenLineUITests/Pods-GreenLine-GreenLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DBD33F2CBC893130D952B43 /* Pods-GreenLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine/Pods-GreenLine.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5D8F03DC1629676C39A1B2 /* Pods_GreenLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +132,6 @@
 		D9EBEC1C2896C1C2005C0D49 /* GreenLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9EBEC1F2896C1C2005C0D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9EBEC212896C1C2005C0D49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D9EBEC262896C1C2005C0D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9EBEC282896C1C4005C0D49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9EBEC2B2896C1C4005C0D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9EBEC2D2896C1C4005C0D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07D4BFDB28C9C2E30052C4E8 /* My Schedule - Add */,
 				07D4BFA328C33CB50052C4E8 /* Schedule - Shifts */,
 				07D4BFA228C33CAA0052C4E8 /* Main - More */,
 				07D4BFA128C33C9B0052C4E8 /* Main - Time Clock */,
@@ -431,7 +434,7 @@
 		D9EBEC562896C414005C0D49 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D9EBEC252896C1C2005C0D49 /* Main.storyboard */,
+				07D4BFDD28C9C3080052C4E8 /* Main.storyboard */,
 				D9EBEC2A2896C1C4005C0D49 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -589,8 +592,9 @@
 				D9EBEC712896CD73005C0D49 /* Montserrat-Bold.ttf in Resources */,
 				D9EBEC2C2896C1C4005C0D49 /* LaunchScreen.storyboard in Resources */,
 				D9EBEC292896C1C4005C0D49 /* Assets.xcassets in Resources */,
+				07D4BFDC28C9C2E30052C4E8 /* My Schedule - Add in Resources */,
+				07D4BFDE28C9C3080052C4E8 /* Main.storyboard in Resources */,
 				D9EBEC7F2896CD73005C0D49 /* Montserrat-SemiBold.ttf in Resources */,
-				D9EBEC272896C1C2005C0D49 /* Main.storyboard in Resources */,
 				D9461332289D9A3C00FBA5D5 /* DateCollectionViewCell.xib in Resources */,
 				D9461331289D9A3C00FBA5D5 /* CalendarView.xib in Resources */,
 				D9EBEC782896CD73005C0D49 /* Montserrat-Medium.ttf in Resources */,
@@ -801,14 +805,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D9EBEC252896C1C2005C0D49 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9EBEC262896C1C2005C0D49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D9EBEC2A2896C1C4005C0D49 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

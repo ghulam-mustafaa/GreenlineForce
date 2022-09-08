@@ -25,6 +25,7 @@ class MyScheduleViewController: BaseViewController {
     }
     @IBAction
     func addScheduleButtonAction(_ sender: UIButton) {
+        let vc = AddSc
     }
 }
 
