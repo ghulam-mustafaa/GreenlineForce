@@ -25,7 +25,10 @@ class MyScheduleViewController: BaseViewController {
     }
     @IBAction
     func addScheduleButtonAction(_ sender: UIButton) {
-        let vc = AddSc
+        let vc = AddScheduleViewController.instantiate(from: .Main)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 }
 

@@ -28,8 +28,9 @@
 		07D4BFD128C7EEBA0052C4E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFD028C7EEBA0052C4E8 /* Utils.swift */; };
 		07D4BFD328C7F02A0052C4E8 /* UserEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFD228C7F02A0052C4E8 /* UserEmailViewModel.swift */; };
 		07D4BFD528C7F0980052C4E8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFD428C7F0980052C4E8 /* String.swift */; };
-		07D4BFDC28C9C2E30052C4E8 /* My Schedule - Add in Resources */ = {isa = PBXBuildFile; fileRef = 07D4BFDB28C9C2E30052C4E8 /* My Schedule - Add */; };
 		07D4BFDE28C9C3080052C4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D4BFDD28C9C3080052C4E8 /* Main.storyboard */; };
+		07D4BFE228C9C5B80052C4E8 /* AddScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFE028C9C5B80052C4E8 /* AddScheduleView.swift */; };
+		07D4BFE328C9C5B80052C4E8 /* AddScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */; };
 		2191FA62D41BA1CA01401239 /* Pods_GreenLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3BDF8EC6ECC40F9784448D /* Pods_GreenLineTests.framework */; };
 		73F10ED0ADDFB25C98220F6F /* Pods_GreenLine_GreenLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33BDAA88DA9AD753425A0F6 /* Pods_GreenLine_GreenLineUITests.framework */; };
 		D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9461310289AE2AB00FBA5D5 /* EnterPasswordViewController.swift */; };
@@ -108,8 +109,9 @@
 		07D4BFD028C7EEBA0052C4E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		07D4BFD228C7F02A0052C4E8 /* UserEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEmailViewModel.swift; sourceTree = "<group>"; };
 		07D4BFD428C7F0980052C4E8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		07D4BFDB28C9C2E30052C4E8 /* My Schedule - Add */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "My Schedule - Add"; sourceTree = "<group>"; };
 		07D4BFDD28C9C3080052C4E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		07D4BFE028C9C5B80052C4E8 /* AddScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleView.swift; sourceTree = "<group>"; };
+		07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleViewController.swift; sourceTree = "<group>"; };
 		09E2A468E756028997096DC4 /* Pods-GreenLine-GreenLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine-GreenLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine-GreenLineUITests/Pods-GreenLine-GreenLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DBD33F2CBC893130D952B43 /* Pods-GreenLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine/Pods-GreenLine.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5D8F03DC1629676C39A1B2 /* Pods_GreenLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +232,15 @@
 				07D4BFC228C7E2B00052C4E8 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		07D4BFDF28C9C59B0052C4E8 /* My Schedule - Add */ = {
+			isa = PBXGroup;
+			children = (
+				07D4BFE028C9C5B80052C4E8 /* AddScheduleView.swift */,
+				07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */,
+			);
+			path = "My Schedule - Add";
 			sourceTree = "<group>";
 		};
 		14EC624D5B6D524E46470AB8 /* Frameworks */ = {
@@ -375,7 +386,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				07D4BFDB28C9C2E30052C4E8 /* My Schedule - Add */,
+				07D4BFDF28C9C59B0052C4E8 /* My Schedule - Add */,
 				07D4BFA328C33CB50052C4E8 /* Schedule - Shifts */,
 				07D4BFA228C33CAA0052C4E8 /* Main - More */,
 				07D4BFA128C33C9B0052C4E8 /* Main - Time Clock */,
@@ -592,7 +603,6 @@
 				D9EBEC712896CD73005C0D49 /* Montserrat-Bold.ttf in Resources */,
 				D9EBEC2C2896C1C4005C0D49 /* LaunchScreen.storyboard in Resources */,
 				D9EBEC292896C1C4005C0D49 /* Assets.xcassets in Resources */,
-				07D4BFDC28C9C2E30052C4E8 /* My Schedule - Add in Resources */,
 				07D4BFDE28C9C3080052C4E8 /* Main.storyboard in Resources */,
 				D9EBEC7F2896CD73005C0D49 /* Montserrat-SemiBold.ttf in Resources */,
 				D9461332289D9A3C00FBA5D5 /* DateCollectionViewCell.xib in Resources */,
@@ -733,6 +743,7 @@
 				07D4BFCF28C7EB490052C4E8 /* LoginViewModel.swift in Sources */,
 				D946131B289B05F200FBA5D5 /* ScheduleViewController.swift in Sources */,
 				D9461318289AF84A00FBA5D5 /* MainTabBarViewController.swift in Sources */,
+				07D4BFE228C9C5B80052C4E8 /* AddScheduleView.swift in Sources */,
 				07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */,
 				D9EBEC852896D6E5005C0D49 /* UIColor.swift in Sources */,
 				D946131F289B066400FBA5D5 /* ScheduleTableViewCell.swift in Sources */,
@@ -767,6 +778,7 @@
 				D9EBEC8A2896E977005C0D49 /* ChooseYourTeamViewController.swift in Sources */,
 				07D4BFC328C7E2B00052C4E8 /* UserDefaultsManager.swift in Sources */,
 				07D4BFB228C33D490052C4E8 /* ShiftsTableViewCell.swift in Sources */,
+				07D4BFE328C9C5B80052C4E8 /* AddScheduleViewController.swift in Sources */,
 				D9EBEC8E2896EBEA005C0D49 /* UITableVewCell.swift in Sources */,
 				D946131D289B061500FBA5D5 /* ScheduleView.swift in Sources */,
 			);
