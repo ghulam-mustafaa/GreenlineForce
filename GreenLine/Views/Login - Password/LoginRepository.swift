@@ -10,6 +10,7 @@ import Alamofire
 import ObjectMapper
 
 typealias LoginResult = (Result<UserSessionData, GreenlineError>)
+typealias ProfileResult = (Result<GreenlineUser, GreenlineError>)
 
 class LoginRepositry {
     func loginUser(withEmail email : String, andPassword password : String, withCompletion completion: @escaping (LoginResult) -> Void) {
@@ -35,21 +36,46 @@ class LoginRepositry {
         }
     }
     
+    func getUserProfile(withCompletion completion: @escaping (ProfileResult) -> Void) {
+        APIClient.shared.performRequest(LoginRequest.userProfile, shouldAddHeader: true) { (result: APIClientResult) in
+            switch result {
+                case .success(let value):
+                    guard let (headers, body) = value as? ([String: Any], [String: Any]) else {
+                        completion(.failure(GreenlineError(message: "Failed to parse data")))
+                        return
+                    }
+                    if let error = Mapper<GreenlineError>().map(JSONObject: body) {
+                        completion(.failure(error))
+                        return
+                    }
+                    guard let user = Mapper<GreenlineUser>().map(JSONObject: body) else {
+                        completion(.failure(GreenlineError(message: "Failed to parse data")))
+                        return
+                    }
+                    completion(.success(user))
+                case .failure(let error):
+                    completion(.failure(error))
+            }
+        }
+    }
 }
 
 enum LoginRequest: HTTPRequest {
     case login(email : String, password : String)
+    case userProfile
 }
 
 extension LoginRequest {
     var endPoint: URL? {
         switch self {
             case .login: return Endpoint.login
+            case .userProfile: return Endpoint.getUserProfile
         }
     }
     var method: HTTPMethod {
         switch self {
             case .login: return .post
+            case .userProfile: return .post
         }
     }
     var parameters: Parameters? {
@@ -59,6 +85,9 @@ extension LoginRequest {
                                           "password": password,
                                           "IsWeb": 0
                 ]
+                return params
+            default:
+                let params: Parameters = [:]
                 return params
         }
     }

@@ -39,6 +39,14 @@ class MoreViewController: BaseViewController {
         present(vc, animated: true)
     }
     
+    
+    private func openProfileViewController() {
+        let vc = ProfileViewController.instantiate(from: .Main)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
     private func logout() {
         SessionManager.shared.logout()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -48,6 +56,11 @@ class MoreViewController: BaseViewController {
         navRootController.pushViewController(vc, animated: true)
         appDelegate.window?.rootViewController = navRootController
         appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    @IBAction
+    func profileButtonAction(_ sender: UIButton) {
+        openProfileViewController()
     }
     
     @IBAction

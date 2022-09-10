@@ -44,7 +44,7 @@ class APIClient {
         }
         var headers: HTTPHeaders?
         if shouldAddHeader {
-            let auth = HTTPHeader(name: "Authorization", value: UserDefaultsManager.accessToken)
+            let auth = HTTPHeader(name: "Authorization", value: "Bearer " + UserDefaultsManager.accessToken)
             let client = HTTPHeader(name: "accept", value: "*/*" )
             let uid = HTTPHeader(name: "Content-Type", value:  "application/json" )
             headers = [auth,client,uid]
@@ -57,6 +57,7 @@ class APIClient {
             encoding: parameterEncoding,
             headers: headers
         ).responseJSON { response in
+            print(response)
             if response.response?.statusCode == 401 {
                 completion(.failure(GreenlineError(message: "Email or password is incorrect")))
                 return

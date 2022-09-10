@@ -36,6 +36,9 @@
 		07D4BFEF28CA66E50052C4E8 /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFEE28CA66E50052C4E8 /* PayView.swift */; };
 		07D4BFF128CA66F60052C4E8 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF028CA66F60052C4E8 /* PayViewController.swift */; };
 		07D4BFF328CA89BB0052C4E8 /* PayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF228CA89BA0052C4E8 /* PayTableViewCell.swift */; };
+		07D4BFF628CCBAA80052C4E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF528CCBAA80052C4E8 /* ProfileView.swift */; };
+		07D4BFF828CCBAC10052C4E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */; };
+		07D4BFFA28CCD3810052C4E8 /* GreenlineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */; };
 		2191FA62D41BA1CA01401239 /* Pods_GreenLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3BDF8EC6ECC40F9784448D /* Pods_GreenLineTests.framework */; };
 		73F10ED0ADDFB25C98220F6F /* Pods_GreenLine_GreenLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33BDAA88DA9AD753425A0F6 /* Pods_GreenLine_GreenLineUITests.framework */; };
 		D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9461310289AE2AB00FBA5D5 /* EnterPasswordViewController.swift */; };
@@ -122,6 +125,9 @@
 		07D4BFEE28CA66E50052C4E8 /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
 		07D4BFF028CA66F60052C4E8 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		07D4BFF228CA89BA0052C4E8 /* PayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTableViewCell.swift; sourceTree = "<group>"; };
+		07D4BFF528CCBAA80052C4E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenlineUser.swift; sourceTree = "<group>"; };
 		09E2A468E756028997096DC4 /* Pods-GreenLine-GreenLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine-GreenLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine-GreenLineUITests/Pods-GreenLine-GreenLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DBD33F2CBC893130D952B43 /* Pods-GreenLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine/Pods-GreenLine.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5D8F03DC1629676C39A1B2 /* Pods_GreenLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +278,15 @@
 			path = "More - Pay";
 			sourceTree = "<group>";
 		};
+		07D4BFF428CCBA7B0052C4E8 /* More - Profile */ = {
+			isa = PBXGroup;
+			children = (
+				07D4BFF528CCBAA80052C4E8 /* ProfileView.swift */,
+				07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */,
+			);
+			path = "More - Profile";
+			sourceTree = "<group>";
+		};
 		14EC624D5B6D524E46470AB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +416,7 @@
 				07D4BFBE28C7E0870052C4E8 /* GreenlineError.swift */,
 				07D4BFCA28C7E94A0052C4E8 /* UserSessionData.swift */,
 				07D4BFCC28C7EB300052C4E8 /* Enums.swift */,
+				07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -415,6 +431,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07D4BFF428CCBA7B0052C4E8 /* More - Profile */,
 				07D4BFED28CA66C80052C4E8 /* More - Pay */,
 				07D4BFE828CA664B0052C4E8 /* More - Absences */,
 				07D4BFDF28C9C59B0052C4E8 /* My Schedule - Add */,
@@ -776,6 +793,7 @@
 				D946131B289B05F200FBA5D5 /* ScheduleViewController.swift in Sources */,
 				D9461318289AF84A00FBA5D5 /* MainTabBarViewController.swift in Sources */,
 				07D4BFE228C9C5B80052C4E8 /* AddScheduleView.swift in Sources */,
+				07D4BFFA28CCD3810052C4E8 /* GreenlineUser.swift in Sources */,
 				07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */,
 				D9EBEC852896D6E5005C0D49 /* UIColor.swift in Sources */,
 				D946131F289B066400FBA5D5 /* ScheduleTableViewCell.swift in Sources */,
@@ -798,6 +816,7 @@
 				D9EBEC942896ECB6005C0D49 /* UIViewController.swift in Sources */,
 				07D4BFCD28C7EB300052C4E8 /* Enums.swift in Sources */,
 				07D4BFA728C33CE60052C4E8 /* MyScheduleView.swift in Sources */,
+				07D4BFF828CCBAC10052C4E8 /* ProfileViewController.swift in Sources */,
 				07D4BFBF28C7E0870052C4E8 /* GreenlineError.swift in Sources */,
 				D9EBEC222896C1C2005C0D49 /* SceneDelegate.swift in Sources */,
 				07D4BFCB28C7E94A0052C4E8 /* UserSessionData.swift in Sources */,
@@ -806,6 +825,7 @@
 				07D4BFAC28C33D140052C4E8 /* MoreViewController.swift in Sources */,
 				07D4BFEA28CA66820052C4E8 /* AbsencesViewController.swift in Sources */,
 				D9EBEC902896EC2C005C0D49 /* UITableView.swift in Sources */,
+				07D4BFF628CCBAA80052C4E8 /* ProfileView.swift in Sources */,
 				07D4BFD528C7F0980052C4E8 /* String.swift in Sources */,
 				D9EBEC5B2896C516005C0D49 /* GetUserEmailView.swift in Sources */,
 				07D4BFC928C7E8230052C4E8 /* EndPoint.swift in Sources */,
@@ -987,7 +1007,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;
@@ -1019,7 +1039,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;

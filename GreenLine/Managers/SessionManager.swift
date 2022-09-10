@@ -22,7 +22,7 @@ class SessionManager {
     
     // MARK: Properties
     
-//    public var user: LevelUpUser?
+    public var user: GreenlineUser?
     public var isUserLogin: Bool {
         return !UserDefaultsManager.accessToken.isEmpty
     }
@@ -37,10 +37,10 @@ class SessionManager {
 //        }
     }
     
-//    public func saveUser(user: LevelUpUser){
-//        self.user = user
-//        UserDefaultsManager.user = user.toJSON()
-//    }
+    public func saveUser(user: GreenlineUser){
+        self.user = user
+        UserDefaultsManager.user = user.toJSON()
+    }
     
 //    public func updateUser(){
 //        UserDefaultsManager.user = user?.toJSON() ?? [:]

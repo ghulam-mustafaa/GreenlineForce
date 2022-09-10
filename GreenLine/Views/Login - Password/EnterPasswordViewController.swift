@@ -20,6 +20,17 @@ class EnterPasswordViewController: BaseViewController {
 
     }
     
+    private func getUserProfile() {
+        viewModel.getUserProfile(success: {
+            if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
+                let vc = MainTabBarViewController.instantiate(from: .Main)
+                appdelegate.window?.rootViewController = vc
+            }
+        }, failure: { error in
+            Utils.showErrorDialog(withError: error, controller: self)
+        })
+    }
+    
     @IBAction
     func rememberMeButtonAction(_ sender: UIButton) {
         isRememberMeSelected = !isRememberMeSelected
@@ -46,10 +57,7 @@ class EnterPasswordViewController: BaseViewController {
         switch validationState {
             case .valid:
                 viewModel.loginUser(success: {
-                    if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
-                        let vc = MainTabBarViewController.instantiate(from: .Main)
-                        appdelegate.window?.rootViewController = vc
-                    }
+                    self.getUserProfile()
                 }, failure: { error in
                     Utils.showErrorDialog(withError: error, controller: self)
                 })

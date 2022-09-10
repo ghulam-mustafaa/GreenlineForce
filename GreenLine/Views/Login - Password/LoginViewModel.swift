@@ -45,4 +45,17 @@ class LoginViewModel {
             }
         })
     }
+    
+    func getUserProfile(success: @escaping () -> Void, failure: @escaping failureCompletionHandler) {
+        repository.getUserProfile(withCompletion:  {
+            (result) in
+            switch result {
+                case .success(let user):
+                    SessionManager.shared.saveUser(user: user)
+                    success()
+                case .failure(let error):
+                    failure(error)
+            }
+        })
+    }
 }

@@ -11,4 +11,7 @@ enum Endpoint {
     static var login: URL? {
         URL(string: "Authenticate/login", relativeTo: Environment.baseUrl)
     }
+    static var getUserProfile: URL? {
+        URL(string: "User/Get", relativeTo: Environment.baseUrl)
+    }
 }
