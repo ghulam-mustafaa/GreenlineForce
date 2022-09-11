@@ -1,28 +1,38 @@
 PODS:
   - Alamofire (5.6.2)
   - IQKeyboardManagerSwift (6.5.10)
+  - MBProgressHUD (1.2.0)
   - ObjectMapper (4.2.0)
+  - SDWebImage (5.13.2):
+    - SDWebImage/Core (= 5.13.2)
+  - SDWebImage/Core (5.13.2)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - Alamofire
   - IQKeyboardManagerSwift
+  - MBProgressHUD
   - ObjectMapper
+  - SDWebImage (~> 5.0)
   - SnapKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManagerSwift
+    - MBProgressHUD
     - ObjectMapper
+    - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 9a82b91fd922264d7be790fd53983d08af6ff6c5
+PODFILE CHECKSUM: fe0192135b0ad6fa4637702b8e5d7b6b3f56f17b
 
 COCOAPODS: 1.11.3

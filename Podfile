@@ -10,6 +10,8 @@ target 'GreenLine' do
   pod 'SnapKit'
   pod 'Alamofire'
   pod 'ObjectMapper'
+  pod 'SDWebImage', '~> 5.0'
+  pod 'MBProgressHUD'
 
   target 'GreenLineTests' do
     inherit! :search_paths

@@ -1547,8 +1547,7 @@
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQB-IJ-sNa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <connections>
                                                                     <action selector="profileButtonAction:" destination="ib3-mP-zFn" eventType="touchUpInside" id="nlE-hb-UfB"/>
                                                                 </connections>
@@ -2532,6 +2531,44 @@
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="1484.5982142857142"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="2Ax-c0-yGh">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="aTn-XZ-GPg" customClass="SplashViewController" customModule="GreenLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLj-58-sI0" customClass="SplashView" customModule="GreenLine" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bottom_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tE7-xc-MXM">
+                                <rect key="frame" x="66" y="519.5" width="348" height="376.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="cTh-QI-LZy">
+                                <rect key="frame" x="82" y="358" width="250" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4qg-5n-hCm"/>
+                                    <constraint firstAttribute="height" constant="190" id="kHq-xr-kV8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="838-cy-qq1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cTh-QI-LZy" firstAttribute="centerX" secondItem="838-cy-qq1" secondAttribute="centerX" id="2jS-IN-MH5"/>
+                            <constraint firstItem="cTh-QI-LZy" firstAttribute="centerY" secondItem="838-cy-qq1" secondAttribute="centerY" id="8Fw-xt-iWz"/>
+                            <constraint firstItem="838-cy-qq1" firstAttribute="trailing" secondItem="tE7-xc-MXM" secondAttribute="trailing" id="8GW-x7-0eD"/>
+                            <constraint firstAttribute="bottom" secondItem="tE7-xc-MXM" secondAttribute="bottom" id="NRS-6E-psV"/>
+                            <constraint firstItem="tE7-xc-MXM" firstAttribute="height" secondItem="CLj-58-sI0" secondAttribute="height" multiplier="0.42" id="ORZ-V4-URi"/>
+                            <constraint firstItem="tE7-xc-MXM" firstAttribute="leading" secondItem="838-cy-qq1" secondAttribute="leading" constant="66" id="hVW-6h-uD2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashView" destination="CLj-58-sI0" id="52P-b9-85f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6HP-iT-awx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="2299"/>
+        </scene>
         <!--Absences View Controller-->
         <scene sceneID="tqB-E4-KOR">
             <objects>
@@ -3378,6 +3415,18 @@
                                             <action selector="selectGenderButtonAction:" destination="aaG-5A-wEl" eventType="touchUpInside" id="WUf-Vg-dfp"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2B-si-e6h">
+                                        <rect key="frame" x="225" y="171" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="NiK-rm-Fy1"/>
+                                            <constraint firstAttribute="width" secondItem="O2B-si-e6h" secondAttribute="height" multiplier="1:1" id="eV7-MU-Zft"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.12549019610000001" green="0.16078431369999999" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="camera.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -3415,9 +3464,11 @@
                                     <constraint firstItem="h3o-1V-1ky" firstAttribute="leading" secondItem="wfz-VY-DF9" secondAttribute="leading" constant="16" id="ZxT-vo-dk0"/>
                                     <constraint firstItem="Qb6-LT-z89" firstAttribute="leading" secondItem="wfz-VY-DF9" secondAttribute="leading" constant="16" id="b3x-zI-s5R"/>
                                     <constraint firstItem="i05-el-pLQ" firstAttribute="top" secondItem="wfz-VY-DF9" secondAttribute="top" constant="50" id="b8X-hx-s9r"/>
+                                    <constraint firstItem="O2B-si-e6h" firstAttribute="bottom" secondItem="3Kq-Le-rSR" secondAttribute="bottom" id="bUe-PK-iYX"/>
                                     <constraint firstItem="bXn-j8-HLq" firstAttribute="top" secondItem="7oe-54-Dat" secondAttribute="bottom" constant="16" id="bbu-pi-IES"/>
                                     <constraint firstItem="d94-RU-fBS" firstAttribute="bottom" secondItem="bXn-j8-HLq" secondAttribute="bottom" id="bxY-fN-0qC"/>
                                     <constraint firstItem="d94-RU-fBS" firstAttribute="leading" secondItem="bXn-j8-HLq" secondAttribute="leading" id="dzQ-Wa-79R"/>
+                                    <constraint firstItem="O2B-si-e6h" firstAttribute="trailing" secondItem="3Kq-Le-rSR" secondAttribute="trailing" id="fIb-CL-JUT"/>
                                     <constraint firstItem="o6M-Of-7LR" firstAttribute="leading" secondItem="25d-x8-ABT" secondAttribute="trailing" constant="64" id="hkp-T1-ELR"/>
                                     <constraint firstItem="3Kq-Le-rSR" firstAttribute="centerX" secondItem="wfz-VY-DF9" secondAttribute="centerX" id="iaH-MI-lNW"/>
                                     <constraint firstAttribute="trailing" secondItem="Kuv-o2-QSV" secondAttribute="trailing" constant="24" id="jHO-0x-vVA"/>
@@ -3489,6 +3540,7 @@
         <image name="airplane_landing" width="16" height="16"/>
         <image name="airplane_takeoff" width="16" height="16"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="closed_eye" width="24" height="24"/>
         <image name="empty_check_box" width="17" height="17"/>
@@ -3516,6 +3568,8 @@
         <image name="my_schedule_inactive" width="24.5" height="24"/>
         <image name="no_schedule" width="48" height="48"/>
         <image name="schedule_inactive" width="24" height="24"/>
+        <image name="splash_bottom_icon" width="317" height="384"/>
+        <image name="splash_logo" width="240.5" height="192"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="time_clock_inactive" width="24.5" height="24"/>

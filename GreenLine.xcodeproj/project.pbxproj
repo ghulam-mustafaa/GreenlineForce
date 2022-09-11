@@ -39,6 +39,10 @@
 		07D4BFF628CCBAA80052C4E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF528CCBAA80052C4E8 /* ProfileView.swift */; };
 		07D4BFF828CCBAC10052C4E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */; };
 		07D4BFFA28CCD3810052C4E8 /* GreenlineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */; };
+		07D4BFFD28CDCEE70052C4E8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFFC28CDCEE70052C4E8 /* SplashViewController.swift */; };
+		07D4BFFF28CDCEFF0052C4E8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFFE28CDCEFF0052C4E8 /* SplashView.swift */; };
+		07D4C00128CDCF420052C4E8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C00028CDCF410052C4E8 /* SplashViewModel.swift */; };
+		07D4C00328CDD5750052C4E8 /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4C00228CDD5730052C4E8 /* LoaderManager.swift */; };
 		2191FA62D41BA1CA01401239 /* Pods_GreenLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3BDF8EC6ECC40F9784448D /* Pods_GreenLineTests.framework */; };
 		73F10ED0ADDFB25C98220F6F /* Pods_GreenLine_GreenLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33BDAA88DA9AD753425A0F6 /* Pods_GreenLine_GreenLineUITests.framework */; };
 		D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9461310289AE2AB00FBA5D5 /* EnterPasswordViewController.swift */; };
@@ -128,6 +132,10 @@
 		07D4BFF528CCBAA80052C4E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenlineUser.swift; sourceTree = "<group>"; };
+		07D4BFFC28CDCEE70052C4E8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		07D4BFFE28CDCEFF0052C4E8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		07D4C00028CDCF410052C4E8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		07D4C00228CDD5730052C4E8 /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
 		09E2A468E756028997096DC4 /* Pods-GreenLine-GreenLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine-GreenLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine-GreenLineUITests/Pods-GreenLine-GreenLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DBD33F2CBC893130D952B43 /* Pods-GreenLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenLine.debug.xcconfig"; path = "Target Support Files/Pods-GreenLine/Pods-GreenLine.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5D8F03DC1629676C39A1B2 /* Pods_GreenLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +254,7 @@
 				07D4BFBC28C7DF0A0052C4E8 /* ApiClient.swift */,
 				07D4BFC028C7E1220052C4E8 /* SessionManager.swift */,
 				07D4BFC228C7E2B00052C4E8 /* UserDefaultsManager.swift */,
+				07D4C00228CDD5730052C4E8 /* LoaderManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -285,6 +294,16 @@
 				07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */,
 			);
 			path = "More - Profile";
+			sourceTree = "<group>";
+		};
+		07D4BFFB28CDCECC0052C4E8 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				07D4BFFC28CDCEE70052C4E8 /* SplashViewController.swift */,
+				07D4BFFE28CDCEFF0052C4E8 /* SplashView.swift */,
+				07D4C00028CDCF410052C4E8 /* SplashViewModel.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		14EC624D5B6D524E46470AB8 /* Frameworks */ = {
@@ -431,6 +450,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07D4BFFB28CDCECC0052C4E8 /* Splash */,
 				07D4BFF428CCBA7B0052C4E8 /* More - Profile */,
 				07D4BFED28CA66C80052C4E8 /* More - Pay */,
 				07D4BFE828CA664B0052C4E8 /* More - Absences */,
@@ -811,6 +831,7 @@
 				07D4BFC128C7E1220052C4E8 /* SessionManager.swift in Sources */,
 				07D4BFC528C7E75E0052C4E8 /* LoginRepository.swift in Sources */,
 				D946132F289D9A3C00FBA5D5 /* DateCollectionViewCell.swift in Sources */,
+				07D4C00328CDD5750052C4E8 /* LoaderManager.swift in Sources */,
 				D9EBEC592896C4FF005C0D49 /* GetUserEmailViewController.swift in Sources */,
 				D9461330289D9A3C00FBA5D5 /* DayCollectionViewCell.swift in Sources */,
 				D9EBEC942896ECB6005C0D49 /* UIViewController.swift in Sources */,
@@ -822,8 +843,10 @@
 				07D4BFCB28C7E94A0052C4E8 /* UserSessionData.swift in Sources */,
 				07D4BFAA28C33D070052C4E8 /* MoreView.swift in Sources */,
 				D9461316289AF83800FBA5D5 /* MainTabBarView.swift in Sources */,
+				07D4C00128CDCF420052C4E8 /* SplashViewModel.swift in Sources */,
 				07D4BFAC28C33D140052C4E8 /* MoreViewController.swift in Sources */,
 				07D4BFEA28CA66820052C4E8 /* AbsencesViewController.swift in Sources */,
+				07D4BFFF28CDCEFF0052C4E8 /* SplashView.swift in Sources */,
 				D9EBEC902896EC2C005C0D49 /* UITableView.swift in Sources */,
 				07D4BFF628CCBAA80052C4E8 /* ProfileView.swift in Sources */,
 				07D4BFD528C7F0980052C4E8 /* String.swift in Sources */,
@@ -837,6 +860,7 @@
 				07D4BFE328C9C5B80052C4E8 /* AddScheduleViewController.swift in Sources */,
 				D9EBEC8E2896EBEA005C0D49 /* UITableVewCell.swift in Sources */,
 				D946131D289B061500FBA5D5 /* ScheduleView.swift in Sources */,
+				07D4BFFD28CDCEE70052C4E8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

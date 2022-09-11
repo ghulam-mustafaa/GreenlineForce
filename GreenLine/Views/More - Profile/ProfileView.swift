@@ -5,7 +5,9 @@
 //  Created by EAPPLE on 10/09/2022.
 //
 
+import SDWebImage
 import UIKit
+
 
 class ProfileView: UIView {
 
@@ -40,6 +42,12 @@ class ProfileView: UIView {
         editNameTextField.text = user?.name
         editEmailTextField.text = user?.email
         editPhoneTextField.text = user?.phone
+        profileImageView.setBorderWidth(width: 1)
+        profileImageView.setBorderColor(color: .textFieldBorderColor)
+        editImageView.setBorderWidth(width: 1)
+        editImageView.setBorderColor(color: .textFieldBorderColor)
+        profileImageView.sd_setImage(with: URL(string: user?.profilePicture ?? ""), placeholderImage: UIImage(named: "default_user_image"))
+        editImageView.sd_setImage(with: URL(string: user?.profilePicture ?? ""), placeholderImage: UIImage(named: "default_user_image"))
     }
     
     func hideEditView(_ shouldHide: Bool) {

@@ -25,12 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setRootViewController() {
         let navRootController = UINavigationController()
         navRootController.setNavigationBarHidden(true, animated: false)
-        var viewController: UIViewController
-        if UserDefaultsManager.accessToken.isNotEmpty && UserDefaultsManager.isRememberMeSelected {
-            viewController = MainTabBarViewController.instantiate(from: .Main)
-        } else {
-            viewController = GetUserEmailViewController.instantiate(from: .Main)
-        }
+        let viewController = SplashViewController.instantiate(from: .Main)
         navRootController.pushViewController(viewController, animated: true)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navRootController

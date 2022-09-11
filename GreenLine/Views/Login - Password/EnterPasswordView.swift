@@ -23,6 +23,7 @@ class EnterPasswordView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        passwordTextField.isSecureTextEntry = true
         [passwordBGView, teamBGView].forEach({
             $0?.setBorderColor(color: .textFieldBorderColor)
             $0?.setBorderWidth(width: 1)
