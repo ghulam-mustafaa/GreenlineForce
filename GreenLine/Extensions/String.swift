@@ -17,6 +17,19 @@ extension String {
         return !isEmpty
     }
     
+    var dateFromISO8601: Date? {
+        return Date.Formatter.iso8601.date(from: self)
+    }
+    
+    var date: Date? {
+        get {
+            if let d = dateFromISO8601 {
+                return d
+            }
+            return nil
+        }
+    }
+    
     func trim() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }

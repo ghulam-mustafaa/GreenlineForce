@@ -12,6 +12,7 @@ class ShiftsViewController: BaseViewController {
     @IBOutlet var shiftsView: ShiftsView!
     
     var isFromSchedule = false
+    var viewModel = ShiftsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,9 @@ class ShiftsViewController: BaseViewController {
         shiftsView.setupViews(isFromSchedule)
         shiftsView.tableView.delegate = self
         shiftsView.tableView.dataSource = self
+        viewModel.populatePositions()
+        shiftsView.locationNameLabel.text = viewModel.location?.name
+        shiftsView.monthYearLabel.text = Date().formatDate(toFormat: "EEE, dd MMM")
     }
     
     @IBAction
@@ -39,11 +43,17 @@ extension ShiftsViewController: UITableViewDelegate {
 
 extension ShiftsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return viewModel.shifts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ShiftsTableViewCell = tableView.dequeueCell(for: indexPath)
+        let shift = viewModel.shifts[indexPath.row]
+        let positionCount = viewModel.postitionsForShift[shift.positionId ?? -1]?.count ?? 0
+        cell.shiftNameLabel.text = shift.positionName
+        cell.startTimeLabel.text = shift.shiftStart
+        cell.endTimeLabel.text = " -\(shift.shiftEnd ?? "")"
+        cell.shiftsCountLabel.text = "\(positionCount)"
         return cell
     }
 }

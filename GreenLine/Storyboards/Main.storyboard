@@ -267,12 +267,29 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_schedule" translatesAutoresizingMaskIntoConstraints="NO" id="f25-P4-lqw">
+                                                <rect key="frame" x="183" y="167" width="48" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="f25-P4-lqw" secondAttribute="height" multiplier="1:1" id="3dr-Bf-8cZ"/>
+                                                    <constraint firstAttribute="height" constant="48" id="VMt-ZL-lR4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No location found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xh-4L-AEj">
+                                                <rect key="frame" x="153" y="219.5" width="108.5" height="15"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                                                <color key="textColor" red="0.12549019610000001" green="0.16078431369999999" blue="0.054901960780000002" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="8AD-LD-uYi" secondAttribute="trailing" id="12J-Cl-paZ"/>
                                             <constraint firstItem="8AD-LD-uYi" firstAttribute="leading" secondItem="vQ4-x5-5hk" secondAttribute="leading" id="50U-dT-Znq"/>
+                                            <constraint firstItem="6xh-4L-AEj" firstAttribute="top" secondItem="f25-P4-lqw" secondAttribute="bottom" constant="4.5" id="JzB-FG-zNs"/>
+                                            <constraint firstItem="6xh-4L-AEj" firstAttribute="centerX" secondItem="f25-P4-lqw" secondAttribute="centerX" id="QEp-cl-5fJ"/>
+                                            <constraint firstItem="f25-P4-lqw" firstAttribute="centerY" secondItem="vQ4-x5-5hk" secondAttribute="centerY" constant="-20" id="VqM-s6-uh3"/>
                                             <constraint firstItem="8AD-LD-uYi" firstAttribute="top" secondItem="vQ4-x5-5hk" secondAttribute="top" constant="16" id="bXd-oV-59H"/>
+                                            <constraint firstItem="f25-P4-lqw" firstAttribute="centerX" secondItem="vQ4-x5-5hk" secondAttribute="centerX" id="fax-Rs-Zrf"/>
                                             <constraint firstAttribute="bottom" secondItem="8AD-LD-uYi" secondAttribute="bottom" id="jLN-wC-hJb"/>
                                         </constraints>
                                     </view>
@@ -359,6 +376,8 @@
                         <connections>
                             <outlet property="calendarView" destination="HBU-bH-YkW" id="NmJ-8K-JJi"/>
                             <outlet property="monthNameLabel" destination="I7F-wH-HTX" id="pUg-Zr-76k"/>
+                            <outlet property="noScheduleIcon" destination="f25-P4-lqw" id="2m9-aC-eIS"/>
+                            <outlet property="noScheduleLabel" destination="6xh-4L-AEj" id="WRP-aw-PLP"/>
                             <outlet property="scheduleBGView" destination="HTS-Wn-vmh" id="7rh-0i-aj5"/>
                             <outlet property="scheduleBottomView" destination="vQ4-x5-5hk" id="OWc-MZ-Sdo"/>
                             <outlet property="scheduleTitleLabel" destination="w9A-gY-bSZ" id="dzk-N3-ag9"/>
@@ -1507,8 +1526,8 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zig-70-sJB">
                                                                 <rect key="frame" x="32" y="12" width="56" height="56"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-cg-qhk">
-                                                                        <rect key="frame" x="15.5" y="18" width="25" height="20"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-cg-qhk">
+                                                                        <rect key="frame" x="16" y="18" width="24" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1527,7 +1546,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toqeer Mughal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN5-0B-jKp">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greenline User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN5-0B-jKp">
                                                                 <rect key="frame" x="104" y="24" width="260" height="20"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                                 <color key="textColor" red="0.12549019610000001" green="0.16078431369999999" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2075,6 +2094,8 @@
                             <outlet property="supportView" destination="KaH-VC-F0f" id="Piq-xn-wQS"/>
                             <outlet property="timesheetStackView" destination="Xkw-Fe-hyW" id="8yl-Zo-WO0"/>
                             <outlet property="timesheetsView" destination="yJ6-Nz-r5W" id="uIQ-aU-Jgy"/>
+                            <outlet property="userAcronymLabel" destination="BdE-cg-qhk" id="7ZG-z8-b1g"/>
+                            <outlet property="userNameLabel" destination="CN5-0B-jKp" id="3V4-Ae-9dJ"/>
                         </connections>
                     </view>
                     <connections>

@@ -38,7 +38,7 @@ class ProfileView: UIView {
         nameLabel.text = user?.name
         emailLabel.text = user?.email
         phoneLabel.text = user?.phone
-        dateofBithLabel.text = user?.createdOn
+        dateofBithLabel.text = user?.createdOn?.date?.formatDate(toFormat: "dd MMM yyyy")
         editNameTextField.text = user?.name
         editEmailTextField.text = user?.email
         editPhoneTextField.text = user?.phone

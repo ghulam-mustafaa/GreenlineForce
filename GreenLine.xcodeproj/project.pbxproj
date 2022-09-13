@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076D997828CF88B800F1142D /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997728CF88B800F1142D /* ScheduleViewModel.swift */; };
+		076D997A28CF892800F1142D /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997928CF892800F1142D /* ScheduleRepository.swift */; };
+		076D997C28CF97B000F1142D /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997B28CF97B000F1142D /* Shift.swift */; };
+		076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */; };
 		07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BF9E28C141080052C4E8 /* BaseViewController.swift */; };
 		07D4BFA528C33CD30052C4E8 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFA428C33CD30052C4E8 /* MyScheduleViewController.swift */; };
 		07D4BFA728C33CE60052C4E8 /* MyScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFA628C33CE60052C4E8 /* MyScheduleView.swift */; };
@@ -100,6 +104,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		076D997728CF88B800F1142D /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		076D997928CF892800F1142D /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
+		076D997B28CF97B000F1142D /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsViewModel.swift; sourceTree = "<group>"; };
 		07D4BF9E28C141080052C4E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		07D4BFA428C33CD30052C4E8 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
 		07D4BFA628C33CE60052C4E8 /* MyScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleView.swift; sourceTree = "<group>"; };
@@ -244,6 +252,7 @@
 				07D4BFAD28C33D230052C4E8 /* ShiftsViewController.swift */,
 				07D4BFAF28C33D360052C4E8 /* ShiftsView.swift */,
 				07D4BFB128C33D490052C4E8 /* ShiftsTableViewCell.swift */,
+				076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */,
 			);
 			path = "Schedule - Shifts";
 			sourceTree = "<group>";
@@ -355,6 +364,8 @@
 				D946131A289B05F200FBA5D5 /* ScheduleViewController.swift */,
 				D946131C289B061500FBA5D5 /* ScheduleView.swift */,
 				D946131E289B066400FBA5D5 /* ScheduleTableViewCell.swift */,
+				076D997728CF88B800F1142D /* ScheduleViewModel.swift */,
+				076D997928CF892800F1142D /* ScheduleRepository.swift */,
 			);
 			path = "Main - Schedule";
 			sourceTree = "<group>";
@@ -436,6 +447,7 @@
 				07D4BFCA28C7E94A0052C4E8 /* UserSessionData.swift */,
 				07D4BFCC28C7EB300052C4E8 /* Enums.swift */,
 				07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */,
+				076D997B28CF97B000F1142D /* Shift.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -827,6 +839,7 @@
 				D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */,
 				07D4BFD128C7EEBA0052C4E8 /* Utils.swift in Sources */,
 				07D4BFD328C7F02A0052C4E8 /* UserEmailViewModel.swift in Sources */,
+				076D997A28CF892800F1142D /* ScheduleRepository.swift in Sources */,
 				07D4BFEF28CA66E50052C4E8 /* PayView.swift in Sources */,
 				07D4BFC128C7E1220052C4E8 /* SessionManager.swift in Sources */,
 				07D4BFC528C7E75E0052C4E8 /* LoginRepository.swift in Sources */,
@@ -839,10 +852,12 @@
 				07D4BFA728C33CE60052C4E8 /* MyScheduleView.swift in Sources */,
 				07D4BFF828CCBAC10052C4E8 /* ProfileViewController.swift in Sources */,
 				07D4BFBF28C7E0870052C4E8 /* GreenlineError.swift in Sources */,
+				076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */,
 				D9EBEC222896C1C2005C0D49 /* SceneDelegate.swift in Sources */,
 				07D4BFCB28C7E94A0052C4E8 /* UserSessionData.swift in Sources */,
 				07D4BFAA28C33D070052C4E8 /* MoreView.swift in Sources */,
 				D9461316289AF83800FBA5D5 /* MainTabBarView.swift in Sources */,
+				076D997C28CF97B000F1142D /* Shift.swift in Sources */,
 				07D4C00128CDCF420052C4E8 /* SplashViewModel.swift in Sources */,
 				07D4BFAC28C33D140052C4E8 /* MoreViewController.swift in Sources */,
 				07D4BFEA28CA66820052C4E8 /* AbsencesViewController.swift in Sources */,
@@ -853,6 +868,7 @@
 				D9EBEC5B2896C516005C0D49 /* GetUserEmailView.swift in Sources */,
 				07D4BFC928C7E8230052C4E8 /* EndPoint.swift in Sources */,
 				07D4BFC728C7E8120052C4E8 /* Environment.swift in Sources */,
+				076D997828CF88B800F1142D /* ScheduleViewModel.swift in Sources */,
 				07D4BFA528C33CD30052C4E8 /* MyScheduleViewController.swift in Sources */,
 				D9EBEC8A2896E977005C0D49 /* ChooseYourTeamViewController.swift in Sources */,
 				07D4BFC328C7E2B00052C4E8 /* UserDefaultsManager.swift in Sources */,
@@ -1031,7 +1047,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;
@@ -1063,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;

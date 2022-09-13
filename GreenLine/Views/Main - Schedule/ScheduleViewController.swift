@@ -13,6 +13,7 @@ class ScheduleViewController: BaseViewController {
     
     var currentMonth = Date().startOfMonth?.toLocalTime()
     var selectedDate = Date().toLocalTime()
+    var viewModel = ScheduleViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +21,31 @@ class ScheduleViewController: BaseViewController {
         scheduleView.calendarView.delegate = self
         scheduleView.tableView.delegate = self
         scheduleView.tableView.dataSource = self
+        scheduleView.searchTextField.delegate = self
+        self.scheduleView.showEmptyView(self.viewModel.shifts.isEmpty)
+        getAllShifts()
+    }
+    
+    private func getAllShifts() {
+        LoaderManager.show(view)
+        viewModel.getUserProfile(success: {
+            LoaderManager.hide(self.view)
+            self.scheduleView.showEmptyView(self.viewModel.shifts.isEmpty)
+            self.scheduleView.tableView.reloadData()
+        }, failure: { error in
+            LoaderManager.hide(self.view)
+            Utils.showErrorDialog(withError: error, controller: self)
+        })
     }
 }
 
 extension ScheduleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let location = viewModel.searchedLocations[indexPath.row]
         let vc = ShiftsViewController.instantiate(from: .Main)
         vc.isFromSchedule = true
+        vc.viewModel.shifts = viewModel.shiftsForLocation[location.id] ?? []
+        vc.viewModel.location = location
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
@@ -39,11 +58,14 @@ extension ScheduleViewController: UITableViewDelegate {
 
 extension ScheduleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.searchedLocations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ScheduleTableViewCell = tableView.dequeueCell(for: indexPath)
+        let location = viewModel.searchedLocations[indexPath.row]
+        let shiftsCount = viewModel.shiftsForLocation[location.id]?.count ?? 0
+        cell.setupData(location, count: shiftsCount)
         return cell
     }
 }
@@ -59,5 +81,24 @@ extension ScheduleViewController: CalendarViewDelegate {
     func calendarView(_: CalendarView, didChangeMonth date: Date) {
         currentMonth = date.startOfMonth?.toLocalTime()
         scheduleView.monthNameLabel.text = date.toLocalTime().formatDate()
+    }
+}
+
+// MARK: - Extension TextFiled delegate
+
+extension ScheduleViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text as NSString? {
+            let txtAfterUpdate = text.replacingCharacters(in: range, with: string)
+            viewModel.searchedLocations = viewModel.locations.filter({ location -> Bool in
+                return location.name.lowercased().contains(txtAfterUpdate.lowercased())
+            })
+        }
+        if range.location == 0 && string.count == 0 {
+            viewModel.searchedLocations = viewModel.locations
+        }
+        scheduleView.showEmptyView(viewModel.searchedLocations.isEmpty)
+        scheduleView.tableView.reloadData()
+        return true
     }
 }

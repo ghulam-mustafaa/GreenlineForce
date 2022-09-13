@@ -14,4 +14,7 @@ enum Endpoint {
     static var getUserProfile: URL? {
         URL(string: "User/Get", relativeTo: Environment.baseUrl)
     }
+    static var getAllShifts: URL? {
+        URL(string: "Shift/GetAll", relativeTo: Environment.baseUrl)
+    }
 }

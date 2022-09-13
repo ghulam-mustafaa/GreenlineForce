@@ -23,11 +23,9 @@ class ScheduleTableViewCell: UITableViewCell {
         cellBGView.setBorderColor(color: .textFieldBorderColor)
         cellBGView.setBorderWidth(width: 1)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupData(_ location: Location, count: Int) {
+        locationTitleLabel.text = location.name
+        countLabel.text = "\(count)"
     }
-
 }

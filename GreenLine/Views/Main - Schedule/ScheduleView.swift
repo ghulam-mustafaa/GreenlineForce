@@ -17,10 +17,18 @@ class ScheduleView: UIView {
     @IBOutlet weak var searchBGView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var calendarView: CalendarView!
+    @IBOutlet weak var noScheduleIcon: UIImageView!
+    @IBOutlet weak var noScheduleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         scheduleBottomView.setCornerRadius(16, forCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+    }
+    
+    func showEmptyView(_ shouldShow: Bool) {
+        noScheduleIcon.isHidden = !shouldShow
+        noScheduleLabel.isHidden = !shouldShow
+        tableView.isHidden = shouldShow
     }
 }
