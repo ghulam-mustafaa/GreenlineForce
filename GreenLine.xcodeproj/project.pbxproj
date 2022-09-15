@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075CEC3128D0F0DD0064C373 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075CEC3028D0F0DD0064C373 /* ProfileRepository.swift */; };
+		075CEC3328D0F6B40064C373 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075CEC3228D0F6B40064C373 /* ProfileViewModel.swift */; };
+		075CEC3628D0FD950064C373 /* ShiftDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075CEC3528D0FD950064C373 /* ShiftDetailView.swift */; };
+		075CEC3828D0FDA60064C373 /* ShiftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075CEC3728D0FDA60064C373 /* ShiftDetailViewController.swift */; };
 		076D997828CF88B800F1142D /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997728CF88B800F1142D /* ScheduleViewModel.swift */; };
 		076D997A28CF892800F1142D /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997928CF892800F1142D /* ScheduleRepository.swift */; };
 		076D997C28CF97B000F1142D /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997B28CF97B000F1142D /* Shift.swift */; };
@@ -104,6 +108,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075CEC3028D0F0DD0064C373 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		075CEC3228D0F6B40064C373 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		075CEC3528D0FD950064C373 /* ShiftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftDetailView.swift; sourceTree = "<group>"; };
+		075CEC3728D0FDA60064C373 /* ShiftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftDetailViewController.swift; sourceTree = "<group>"; };
 		076D997728CF88B800F1142D /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		076D997928CF892800F1142D /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		076D997B28CF97B000F1142D /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
@@ -221,6 +229,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075CEC3428D0FD6C0064C373 /* Schedule - Shift Detail */ = {
+			isa = PBXGroup;
+			children = (
+				075CEC3528D0FD950064C373 /* ShiftDetailView.swift */,
+				075CEC3728D0FDA60064C373 /* ShiftDetailViewController.swift */,
+			);
+			path = "Schedule - Shift Detail";
+			sourceTree = "<group>";
+		};
 		07D4BFA028C33C920052C4E8 /* Main - My Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +318,8 @@
 			children = (
 				07D4BFF528CCBAA80052C4E8 /* ProfileView.swift */,
 				07D4BFF728CCBAC10052C4E8 /* ProfileViewController.swift */,
+				075CEC3028D0F0DD0064C373 /* ProfileRepository.swift */,
+				075CEC3228D0F6B40064C373 /* ProfileViewModel.swift */,
 			);
 			path = "More - Profile";
 			sourceTree = "<group>";
@@ -462,6 +481,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				075CEC3428D0FD6C0064C373 /* Schedule - Shift Detail */,
 				07D4BFFB28CDCECC0052C4E8 /* Splash */,
 				07D4BFF428CCBA7B0052C4E8 /* More - Profile */,
 				07D4BFED28CA66C80052C4E8 /* More - Pay */,
@@ -829,6 +849,7 @@
 				07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */,
 				D9EBEC852896D6E5005C0D49 /* UIColor.swift in Sources */,
 				D946131F289B066400FBA5D5 /* ScheduleTableViewCell.swift in Sources */,
+				075CEC3328D0F6B40064C373 /* ProfileViewModel.swift in Sources */,
 				07D4BFEC28CA66A20052C4E8 /* AbsencesView.swift in Sources */,
 				D9EBEC202896C1C2005C0D49 /* AppDelegate.swift in Sources */,
 				D946132E289D9A3C00FBA5D5 /* CalendarView.swift in Sources */,
@@ -836,6 +857,7 @@
 				07D4BFAE28C33D240052C4E8 /* ShiftsViewController.swift in Sources */,
 				D9EBEC8C2896E9BD005C0D49 /* ChooseYourTeamTableViewCell.swift in Sources */,
 				07D4BFF328CA89BB0052C4E8 /* PayTableViewCell.swift in Sources */,
+				075CEC3828D0FDA60064C373 /* ShiftDetailViewController.swift in Sources */,
 				D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */,
 				07D4BFD128C7EEBA0052C4E8 /* Utils.swift in Sources */,
 				07D4BFD328C7F02A0052C4E8 /* UserEmailViewModel.swift in Sources */,
@@ -845,6 +867,7 @@
 				07D4BFC528C7E75E0052C4E8 /* LoginRepository.swift in Sources */,
 				D946132F289D9A3C00FBA5D5 /* DateCollectionViewCell.swift in Sources */,
 				07D4C00328CDD5750052C4E8 /* LoaderManager.swift in Sources */,
+				075CEC3628D0FD950064C373 /* ShiftDetailView.swift in Sources */,
 				D9EBEC592896C4FF005C0D49 /* GetUserEmailViewController.swift in Sources */,
 				D9461330289D9A3C00FBA5D5 /* DayCollectionViewCell.swift in Sources */,
 				D9EBEC942896ECB6005C0D49 /* UIViewController.swift in Sources */,
@@ -866,6 +889,7 @@
 				07D4BFF628CCBAA80052C4E8 /* ProfileView.swift in Sources */,
 				07D4BFD528C7F0980052C4E8 /* String.swift in Sources */,
 				D9EBEC5B2896C516005C0D49 /* GetUserEmailView.swift in Sources */,
+				075CEC3128D0F0DD0064C373 /* ProfileRepository.swift in Sources */,
 				07D4BFC928C7E8230052C4E8 /* EndPoint.swift in Sources */,
 				07D4BFC728C7E8120052C4E8 /* Environment.swift in Sources */,
 				076D997828CF88B800F1142D /* ScheduleViewModel.swift in Sources */,

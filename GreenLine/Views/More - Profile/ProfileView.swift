@@ -24,30 +24,25 @@ class ProfileView: UIView {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var editProfileBGView: UIView!
     @IBOutlet weak var crossButton: UIButton!
-    @IBOutlet weak var editImageView: UIImageView!
-    @IBOutlet weak var editNameTextField: UITextField!
-    @IBOutlet weak var editEmailTextField: UITextField!
-    @IBOutlet weak var editPhoneTextField: UITextField!
-    @IBOutlet weak var maleRadioIcon: UIImageView!
-    @IBOutlet weak var femaleRadioIcon: UIImageView!
-    @IBOutlet weak var undisclosedRadioIcon: UIImageView!
     @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     
     func setupProfileData() {
         let user = SessionManager.shared.user
-        nameLabel.text = user?.name
+        nameLabel.text = "\(user?.firstName ?? "Greenline") \(user?.lastName ?? "User")"
         emailLabel.text = user?.email
         phoneLabel.text = user?.phone
         dateofBithLabel.text = user?.createdOn?.date?.formatDate(toFormat: "dd MMM yyyy")
-        editNameTextField.text = user?.name
-        editEmailTextField.text = user?.email
-        editPhoneTextField.text = user?.phone
+        firstNameTextField.text = user?.firstName
+        lastNameTextField.text = user?.lastName
+        phoneNumberTextField.text = user?.phone
+        passwordTextField.text = user?.password
         profileImageView.setBorderWidth(width: 1)
         profileImageView.setBorderColor(color: .textFieldBorderColor)
-        editImageView.setBorderWidth(width: 1)
-        editImageView.setBorderColor(color: .textFieldBorderColor)
         profileImageView.sd_setImage(with: URL(string: user?.profilePicture ?? ""), placeholderImage: UIImage(named: "default_user_image"))
-        editImageView.sd_setImage(with: URL(string: user?.profilePicture ?? ""), placeholderImage: UIImage(named: "default_user_image"))
     }
     
     func hideEditView(_ shouldHide: Bool) {

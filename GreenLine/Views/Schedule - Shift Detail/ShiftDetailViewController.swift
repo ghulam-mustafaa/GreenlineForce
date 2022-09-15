@@ -1,31 +1,21 @@
 //
-//  AbsencesViewController.swift
+//  ShiftDetailViewController.swift
 //  GreenLine
 //
-//  Created by EAPPLE on 08/09/2022.
+//  Created by EAPPLE on 13/09/2022.
 //
 
 import UIKit
 
-class AbsencesViewController: BaseViewController {
+class ShiftDetailViewController: BaseViewController {
 
-    @IBOutlet var absencesView: AbsencesView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction
-    func addButtonAction(_ sender: UIButton) {
-    }
-    
-    @IBAction
-    func backButtonAction(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-    
+
     /*
     // MARK: - Navigation
 

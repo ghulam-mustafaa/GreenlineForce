@@ -40,7 +40,7 @@ class MoreView: UIView {
     func setupProfileData() {
         let firstName = SessionManager.shared.user?.firstName ?? "Greenline"
         let lastName = SessionManager.shared.user?.lastName ?? "User"
-        userNameLabel.text = SessionManager.shared.user?.name?.capitalized ?? "Greenline User"
+        userNameLabel.text = "\(firstName) \(lastName)"
         userAcronymLabel.text = "\(firstName.first?.uppercased() ?? "G")\(lastName.first?.uppercased() ?? "U")"
     }
 }

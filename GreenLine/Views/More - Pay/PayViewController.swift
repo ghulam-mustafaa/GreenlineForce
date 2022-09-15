@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PayViewController: UIViewController {
+class PayViewController: BaseViewController {
 
     @IBOutlet var payView: PayView!
     
