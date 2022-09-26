@@ -15,6 +15,8 @@
 		076D997A28CF892800F1142D /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997928CF892800F1142D /* ScheduleRepository.swift */; };
 		076D997C28CF97B000F1142D /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997B28CF97B000F1142D /* Shift.swift */; };
 		076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */; };
+		07BEDD6F28E22A3A00002818 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */; };
+		07BEDD7128E22A6700002818 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */; };
 		07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BF9E28C141080052C4E8 /* BaseViewController.swift */; };
 		07D4BFA528C33CD30052C4E8 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFA428C33CD30052C4E8 /* MyScheduleViewController.swift */; };
 		07D4BFA728C33CE60052C4E8 /* MyScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BFA628C33CE60052C4E8 /* MyScheduleView.swift */; };
@@ -116,6 +118,8 @@
 		076D997928CF892800F1142D /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		076D997B28CF97B000F1142D /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsViewModel.swift; sourceTree = "<group>"; };
+		07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		07D4BF9E28C141080052C4E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		07D4BFA428C33CD30052C4E8 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
 		07D4BFA628C33CE60052C4E8 /* MyScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleView.swift; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 				075CEC3728D0FDA60064C373 /* ShiftDetailViewController.swift */,
 			);
 			path = "Schedule - Shift Detail";
+			sourceTree = "<group>";
+		};
+		07BEDD6D28E2299C00002818 /* Login - Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */,
+				07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */,
+			);
+			path = "Login - Forgot Password";
 			sourceTree = "<group>";
 		};
 		07D4BFA028C33C920052C4E8 /* Main - My Schedule */ = {
@@ -481,6 +494,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07BEDD6D28E2299C00002818 /* Login - Forgot Password */,
 				075CEC3428D0FD6C0064C373 /* Schedule - Shift Detail */,
 				07D4BFFB28CDCECC0052C4E8 /* Splash */,
 				07D4BFF428CCBA7B0052C4E8 /* More - Profile */,
@@ -868,6 +882,7 @@
 				D946132F289D9A3C00FBA5D5 /* DateCollectionViewCell.swift in Sources */,
 				07D4C00328CDD5750052C4E8 /* LoaderManager.swift in Sources */,
 				075CEC3628D0FD950064C373 /* ShiftDetailView.swift in Sources */,
+				07BEDD6F28E22A3A00002818 /* ForgotPasswordViewController.swift in Sources */,
 				D9EBEC592896C4FF005C0D49 /* GetUserEmailViewController.swift in Sources */,
 				D9461330289D9A3C00FBA5D5 /* DayCollectionViewCell.swift in Sources */,
 				D9EBEC942896ECB6005C0D49 /* UIViewController.swift in Sources */,
@@ -888,6 +903,7 @@
 				D9EBEC902896EC2C005C0D49 /* UITableView.swift in Sources */,
 				07D4BFF628CCBAA80052C4E8 /* ProfileView.swift in Sources */,
 				07D4BFD528C7F0980052C4E8 /* String.swift in Sources */,
+				07BEDD7128E22A6700002818 /* ForgotPasswordView.swift in Sources */,
 				D9EBEC5B2896C516005C0D49 /* GetUserEmailView.swift in Sources */,
 				075CEC3128D0F0DD0064C373 /* ProfileRepository.swift in Sources */,
 				07D4BFC928C7E8230052C4E8 /* EndPoint.swift in Sources */,

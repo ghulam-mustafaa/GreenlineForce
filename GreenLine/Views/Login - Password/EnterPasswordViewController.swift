@@ -42,6 +42,11 @@ class EnterPasswordViewController: BaseViewController {
     }
     
     @IBAction
+    func backButtonAction(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction
     func rememberMeButtonAction(_ sender: UIButton) {
         isRememberMeSelected = !isRememberMeSelected
         loginView.selectRememberMeOption(isRememberMeSelected)
@@ -56,7 +61,8 @@ class EnterPasswordViewController: BaseViewController {
     
     @IBAction
     func forgotPasswordButtonAction(_ sender: UIButton) {
-        // TODO: Will Implement in next branch
+        let vc = ForgotPasswordViewController.instantiate(from: .Main)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction

@@ -20,7 +20,11 @@ class ChooseYourTeamViewController: BaseViewController {
         loginView.tableView.dataSource = self
     }
     
-
+    @IBAction
+    func backButtonAction(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction
     func nextButtonAction(_ sender: UIButton) {
         let vc = EnterPasswordViewController.instantiate(from: .Main)
