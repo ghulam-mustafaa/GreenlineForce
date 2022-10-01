@@ -34,14 +34,14 @@ class EnterPasswordView: UIView {
     }
     
     func selectRememberMeOption(_ isSelected: Bool) {
-        let image = isSelected ? UIImage(systemName: "checkmark.square.fill") : UIImage(named: "empty_check_box")
+        let image = isSelected ? UIImage(named: "filled_check_box") : UIImage(named: "empty_check_box")
         rememberMeCheckBoxIcon.image = image
         rememberMeCheckBoxIcon.tintColor = .textColor
     }
     
     func showPassword(_ shouldShow: Bool) {
         passwordTextField.isSecureTextEntry = !shouldShow
-        let image = shouldShow ? UIImage(systemName: "eye") : UIImage(named: "closed_eye")
+        let image = shouldShow ? UIImage(named: "opened_eye") : UIImage(named: "closed_eye")
         showPasswordButton.setImage(image, for: .normal)
         showPasswordButton.tintColor = .textColor
     }

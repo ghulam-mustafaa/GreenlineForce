@@ -32,9 +32,24 @@ extension Date {
             formatter.dateFormat = "yyyy-MM-dd'T'00:00:00.000"
             return formatter
         }()
+        static let birthdate: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss"
+            return formatter
+        }()
+        static let birthday: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: Calendar.Identifier.iso8601)
+            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            formatter.dateFormat = "dd MMM yyyy"
+            return formatter
+        }()
     }
     
     var iso8601: String { return Formatter.iso8601.string(from: self) }
+    var birthdayString: String { return Formatter.birthday.string(from: self) }
+    var sendBirthdayString: String { return Formatter.birthdate.string(from: self) }
     
     var startOfMonth: Date? {
             return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self))

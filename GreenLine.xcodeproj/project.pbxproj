@@ -68,7 +68,6 @@
 		D9461331289D9A3C00FBA5D5 /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D946132C289D9A3B00FBA5D5 /* CalendarView.xib */; };
 		D9461332289D9A3C00FBA5D5 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D946132D289D9A3C00FBA5D5 /* DateCollectionViewCell.xib */; };
 		D9EBEC202896C1C2005C0D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EBEC1F2896C1C2005C0D49 /* AppDelegate.swift */; };
-		D9EBEC222896C1C2005C0D49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EBEC212896C1C2005C0D49 /* SceneDelegate.swift */; };
 		D9EBEC292896C1C4005C0D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9EBEC282896C1C4005C0D49 /* Assets.xcassets */; };
 		D9EBEC2C2896C1C4005C0D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EBEC2A2896C1C4005C0D49 /* LaunchScreen.storyboard */; };
 		D9EBEC372896C1C4005C0D49 /* GreenLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EBEC362896C1C4005C0D49 /* GreenLineTests.swift */; };
@@ -177,7 +176,6 @@
 		D946132D289D9A3C00FBA5D5 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9EBEC1C2896C1C2005C0D49 /* GreenLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9EBEC1F2896C1C2005C0D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9EBEC212896C1C2005C0D49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D9EBEC282896C1C4005C0D49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9EBEC2B2896C1C4005C0D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9EBEC2D2896C1C4005C0D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -541,7 +539,6 @@
 			isa = PBXGroup;
 			children = (
 				D9EBEC1F2896C1C2005C0D49 /* AppDelegate.swift */,
-				D9EBEC212896C1C2005C0D49 /* SceneDelegate.swift */,
 			);
 			path = "Suporting files";
 			sourceTree = "<group>";
@@ -891,7 +888,6 @@
 				07D4BFF828CCBAC10052C4E8 /* ProfileViewController.swift in Sources */,
 				07D4BFBF28C7E0870052C4E8 /* GreenlineError.swift in Sources */,
 				076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */,
-				D9EBEC222896C1C2005C0D49 /* SceneDelegate.swift in Sources */,
 				07D4BFCB28C7E94A0052C4E8 /* UserSessionData.swift in Sources */,
 				07D4BFAA28C33D070052C4E8 /* MoreView.swift in Sources */,
 				D9461316289AF83800FBA5D5 /* MainTabBarView.swift in Sources */,
@@ -1087,7 +1083,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;
@@ -1098,7 +1094,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1119,7 +1115,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;
@@ -1130,7 +1126,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

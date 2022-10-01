@@ -75,7 +75,7 @@ extension LoginRequest {
     var method: HTTPMethod {
         switch self {
             case .login: return .post
-            case .userProfile: return .post
+            case .userProfile: return .get
         }
     }
     var parameters: Parameters? {

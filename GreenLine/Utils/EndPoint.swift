@@ -12,10 +12,10 @@ enum Endpoint {
         URL(string: "Authenticate/login", relativeTo: Environment.baseUrl)
     }
     static var getUserProfile: URL? {
-        URL(string: "User/Get", relativeTo: Environment.baseUrl)
+        URL(string: "User/GetProfileLite", relativeTo: Environment.baseUrl)
     }
     static var updateUserProfile: URL? {
-        URL(string: "User/Update", relativeTo: Environment.baseUrl)
+        URL(string: "User/UpdateProfileMobile", relativeTo: Environment.baseUrl)
     }
     static var getAllShifts: URL? {
         URL(string: "Shift/GetAll", relativeTo: Environment.baseUrl)

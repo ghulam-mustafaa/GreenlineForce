@@ -12,14 +12,22 @@ class BaseViewController: UIViewController {
     // MARK: - Override Properties
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
     }
     override var overrideUserInterfaceStyle: UIUserInterfaceStyle {
         get {
             return .light
         }
         set {
-            super.overrideUserInterfaceStyle = newValue
+            if #available(iOS 13.0, *) {
+                super.overrideUserInterfaceStyle = newValue
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 

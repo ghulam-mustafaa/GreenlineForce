@@ -20,10 +20,16 @@ extension String {
     var dateFromISO8601: Date? {
         return Date.Formatter.iso8601.date(from: self)
     }
+    var dateFromBirthday: Date? {
+        return Date.Formatter.birthdate.date(from: self)
+    }
     
     var date: Date? {
         get {
             if let d = dateFromISO8601 {
+                return d
+            }
+            if let d = dateFromBirthday {
                 return d
             }
             return nil

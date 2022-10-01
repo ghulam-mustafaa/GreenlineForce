@@ -10,8 +10,12 @@ import Alamofire
 import ObjectMapper
 
 class ProfileRepository {
-    func updateUserProfile(fname: String, lname: String, password: String, phone: String, withCompletion completion: @escaping (ScheduleResult) -> Void) {
-        APIClient.shared.performRequest(UpdateProfileRequest.updateProfile(fname: fname, lname: lname, password: password, phone: phone), shouldAddHeader: true) { (result: APIClientResult) in
+    func updateUserProfile(fname: String, lname: String, phone: String,
+                           mobile: String, birthday: String, gender: String,
+                           ecName: String, ecPhone: String, ecRelation: String,
+                           carAccess: Bool, drivingStatus: Bool,
+                           withCompletion completion: @escaping (ScheduleResult) -> Void) {
+        APIClient.shared.performRequest(UpdateProfileRequest.updateProfile(fname: fname, lname: lname, phone: phone, mobile: mobile, birthday: birthday, gender: gender, ecName: ecName, ecPhone: ecPhone, ecRelation: ecRelation, carAccess: carAccess, drivingStatus: drivingStatus), shouldAddHeader: true) { (result: APIClientResult) in
             switch result {
                 case .success(let value):
                     print(value)
@@ -36,7 +40,10 @@ class ProfileRepository {
 }
 
 enum UpdateProfileRequest: HTTPRequest {
-    case updateProfile(fname: String, lname: String, password: String, phone: String)
+    case updateProfile(fname: String, lname: String, phone: String,
+                       mobile: String, birthday: String, gender: String,
+                       ecName: String, ecPhone: String, ecRelation: String,
+                       carAccess: Bool, drivingStatus: Bool)
 }
 
 extension UpdateProfileRequest {
@@ -52,14 +59,27 @@ extension UpdateProfileRequest {
     }
     var parameters: Parameters? {
         switch self {
-            case .updateProfile(let fname, let lname, let password, let phone):
+            case .updateProfile(let fname, let lname, let phone,
+                                let mobile, let birthday, let gender,
+                                let ecName, let ecPhone, let ecRelation,
+                                let carAccess, let drivingStatus):
+                let contact: [String: String] = [
+                    "Name": ecName.trim(),
+                    "Phone": ecPhone.trim(),
+                    "Relation": ecRelation.trim()
+                ]
                 let params: Parameters = [
+                    "UserId": SessionManager.shared.user?.userId ?? -1,
                     "FirstName": fname.trim(),
                     "LastName": lname.trim(),
-                    "Password": password.trim(),
-                    "Phone": phone.trim(),
-                    "Name": "\(fname.trim()) \(lname.trim())",
-                    "Email": SessionManager.shared.user?.email ?? ""
+                    "PhoneNumber": phone.trim(),
+                    "Email": SessionManager.shared.user?.email ?? "",
+                    "MobileNumber": mobile,
+                    "DoB": birthday,
+                    "Gender": gender,
+                    "CarAccess": carAccess,
+                    "DrivingLiscense": drivingStatus,
+                    "EmergencyContact": contact
                 ]
                 return params
         }

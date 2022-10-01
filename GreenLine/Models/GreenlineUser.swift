@@ -9,104 +9,48 @@ import ObjectMapper
 
 class GreenlineUser: Mappable {
     
-    var password: String?
-    var lastName: String?
-    var departments: [Departments]?
-    var status: Int?
-    var createdOn: String?
-    var updatedOn: String?
-    var profilePictureCompressed: String?
-    var positions: [Positions]?
-    var name: String?
-    var createdBy: Int?
-    var phone: String?
-    var id: Int?
-    var isEnable: Bool?
-    var profilePicture: String?
-    var type: Int?
-    var firstName: String?
     var email: String?
-    var contractDetails: ContractDetails?
-    var userRole: Int?
-    var creator: Any?
-    var updatedBy: Int?
+    var status: Bool?
+    var firstName: String?
+    var phoneNumber: String?
+    var emergencyContact: EmergencyContact?
+    var lastName: String?
+    var userId: Int?
+    var carAccess: Bool?
+    var gender: String?
+    var drivingLiscense: Bool?
+    var mobileNumber: String?
+    var doB: String?
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        password <- map["Password"]
-        lastName <- map["LastName"]
-        departments <- map["Departments"]
-        status <- map["Status"]
-        createdOn <- map["CreatedOn"]
-        updatedOn <- map["UpdatedOn"]
-        profilePictureCompressed <- map["ProfilePictureCompressed"]
-        positions <- map["Positions"]
-        name <- map["Name"]
-        createdBy <- map["CreatedBy"]
-        phone <- map["Phone"]
-        id <- map["Id"]
-        isEnable <- map["IsEnable"]
-        profilePicture <- map["ProfilePicture"]
-        type <- map["Type"]
-        firstName <- map["FirstName"]
         email <- map["Email"]
-        contractDetails <- map["ContractDetails"]
-        userRole <- map["UserRole"]
-        creator <- map["Creator"]
-        updatedBy <- map["UpdatedBy"]
+        status <- map["status"]
+        firstName <- map["FirstName"]
+        phoneNumber <- map["PhoneNumber"]
+        emergencyContact <- map["EmergencyContact"]
+        lastName <- map["LastName"]
+        userId <- map["UserId"]
+        carAccess <- map["CarAccess"]
+        gender <- map["Gender"]
+        drivingLiscense <- map["DrivingLiscense"]
+        mobileNumber <- map["MobileNumber"]
+        doB <- map["DoB"]
     }
 }
 
-class Departments: Mappable {
+class EmergencyContact: Mappable {
     
-    var departmentId: Int?
-    var isEnable: Bool?
-    var userId: Int?
-    var id: Int?
+    var relation: String?
+    var phone: String?
+    var name: String?
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        departmentId <- map["DepartmentId"]
-        isEnable <- map["IsEnable"]
-        userId <- map["UserId"]
-        id <- map["Id"]
-    }
-}
-
-class Positions: Mappable {
-    
-    var isEnable: Bool?
-    var userId: Int?
-    var id: Int?
-    var positionId: Int?
-    
-    required init?(map: Map) {}
-    
-    func mapping(map: Map) {
-        isEnable <- map["IsEnable"]
-        userId <- map["UserId"]
-        id <- map["Id"]
-        positionId <- map["PositionId"]
-    }
-}
-
-class ContractDetails: Mappable {
-    
-    var endDate: String?
-    var startDate: String?
-    var number: String?
-    var id: Int?
-    var userId: Int?
-    
-    required init?(map: Map) {}
-    
-    func mapping(map: Map) {
-        endDate <- map["EndDate"]
-        startDate <- map["StartDate"]
-        number <- map["Number"]
-        id <- map["Id"]
-        userId <- map["UserId"]
+        relation <- map["Relation"]
+        phone <- map["Phone"]
+        name <- map["Name"]
     }
 }
