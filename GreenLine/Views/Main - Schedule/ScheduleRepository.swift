@@ -10,6 +10,7 @@ import Alamofire
 import ObjectMapper
 
 typealias ScheduleResult = (Result<[Shift], GreenlineError>)
+typealias AnsenceQuotaResult = (Result<AbsenceQuota, GreenlineError>)
 
 class ScheduleRepository {
     func getAllShifts(from: String?, toDate: String?, pageNo: Int, searchText: String = "", withCompletion completion: @escaping (ScheduleResult) -> Void) {

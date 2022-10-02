@@ -21,6 +21,7 @@ class GreenlineUser: Mappable {
     var drivingLiscense: Bool?
     var mobileNumber: String?
     var doB: String?
+    var profilePicture: String?
     
     required init?(map: Map) {}
     
@@ -37,6 +38,7 @@ class GreenlineUser: Mappable {
         drivingLiscense <- map["DrivingLiscense"]
         mobileNumber <- map["MobileNumber"]
         doB <- map["DoB"]
+        profilePicture <- map["ProfilePicture"]
     }
 }
 

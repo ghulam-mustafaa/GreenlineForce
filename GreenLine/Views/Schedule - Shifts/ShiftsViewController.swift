@@ -21,7 +21,7 @@ class ShiftsViewController: BaseViewController {
         shiftsView.tableView.delegate = self
         shiftsView.tableView.dataSource = self
         viewModel.populatePositions()
-        shiftsView.locationNameLabel.text = viewModel.location?.name
+        shiftsView.locationNameLabel.text = viewModel.location?.name ?? "Amber Lodge Nursing Home"
         shiftsView.monthYearLabel.text = Date().formatDate(toFormat: "EEE, dd MMM")
     }
     
@@ -43,17 +43,19 @@ extension ShiftsViewController: UITableViewDelegate {
 
 extension ShiftsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.shifts.count
+        return isFromSchedule ? viewModel.shifts.count : 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ShiftsTableViewCell = tableView.dequeueCell(for: indexPath)
-        let shift = viewModel.shifts[indexPath.row]
-        let positionCount = viewModel.postitionsForShift[shift.positionId ?? -1]?.count ?? 0
-        cell.shiftNameLabel.text = shift.positionName
-        cell.startTimeLabel.text = shift.shiftStart
-        cell.endTimeLabel.text = " -\(shift.shiftEnd ?? "")"
-        cell.shiftsCountLabel.text = "\(positionCount)"
+        if isFromSchedule {
+            let shift = viewModel.shifts[indexPath.row]
+            let positionCount = viewModel.postitionsForShift[shift.positionId ?? -1]?.count ?? 0
+            cell.shiftNameLabel.text = shift.positionName
+            cell.startTimeLabel.text = shift.shiftStart
+            cell.endTimeLabel.text = " -\(shift.shiftEnd ?? "")"
+            cell.shiftsCountLabel.text = "\(positionCount)"
+        }
         return cell
     }
 }

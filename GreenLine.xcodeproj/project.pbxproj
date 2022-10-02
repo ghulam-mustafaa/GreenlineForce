@@ -15,6 +15,10 @@
 		076D997A28CF892800F1142D /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997928CF892800F1142D /* ScheduleRepository.swift */; };
 		076D997C28CF97B000F1142D /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997B28CF97B000F1142D /* Shift.swift */; };
 		076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */; };
+		07A718D028E982B60092E4D9 /* AbsencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718CF28E982B60092E4D9 /* AbsencesViewModel.swift */; };
+		07A718D228E982C80092E4D9 /* AbsencesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D128E982C80092E4D9 /* AbsencesRepository.swift */; };
+		07A718D428E9844F0092E4D9 /* AbsenceQuota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */; };
+		07A718D628E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */; };
 		07BEDD6F28E22A3A00002818 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */; };
 		07BEDD7128E22A6700002818 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */; };
 		07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BF9E28C141080052C4E8 /* BaseViewController.swift */; };
@@ -117,6 +121,10 @@
 		076D997928CF892800F1142D /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		076D997B28CF97B000F1142D /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsViewModel.swift; sourceTree = "<group>"; };
+		07A718CF28E982B60092E4D9 /* AbsencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesViewModel.swift; sourceTree = "<group>"; };
+		07A718D128E982C80092E4D9 /* AbsencesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesRepository.swift; sourceTree = "<group>"; };
+		07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceQuota.swift; sourceTree = "<group>"; };
+		07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAbsenceTableViewCell.swift; sourceTree = "<group>"; };
 		07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		07D4BF9E28C141080052C4E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +309,7 @@
 			children = (
 				07D4BFE028C9C5B80052C4E8 /* AddScheduleView.swift */,
 				07D4BFE128C9C5B80052C4E8 /* AddScheduleViewController.swift */,
+				07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */,
 			);
 			path = "My Schedule - Add";
 			sourceTree = "<group>";
@@ -310,6 +319,8 @@
 			children = (
 				07D4BFE928CA66810052C4E8 /* AbsencesViewController.swift */,
 				07D4BFEB28CA66A20052C4E8 /* AbsencesView.swift */,
+				07A718CF28E982B60092E4D9 /* AbsencesViewModel.swift */,
+				07A718D128E982C80092E4D9 /* AbsencesRepository.swift */,
 			);
 			path = "More - Absences";
 			sourceTree = "<group>";
@@ -478,6 +489,7 @@
 				07D4BFCC28C7EB300052C4E8 /* Enums.swift */,
 				07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */,
 				076D997B28CF97B000F1142D /* Shift.swift */,
+				07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -854,6 +866,7 @@
 				D9EBEC832896D61E005C0D49 /* UIView.swift in Sources */,
 				07D4BFCF28C7EB490052C4E8 /* LoginViewModel.swift in Sources */,
 				D946131B289B05F200FBA5D5 /* ScheduleViewController.swift in Sources */,
+				07A718D628E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift in Sources */,
 				D9461318289AF84A00FBA5D5 /* MainTabBarViewController.swift in Sources */,
 				07D4BFE228C9C5B80052C4E8 /* AddScheduleView.swift in Sources */,
 				07D4BFFA28CCD3810052C4E8 /* GreenlineUser.swift in Sources */,
@@ -862,6 +875,7 @@
 				D946131F289B066400FBA5D5 /* ScheduleTableViewCell.swift in Sources */,
 				075CEC3328D0F6B40064C373 /* ProfileViewModel.swift in Sources */,
 				07D4BFEC28CA66A20052C4E8 /* AbsencesView.swift in Sources */,
+				07A718D428E9844F0092E4D9 /* AbsenceQuota.swift in Sources */,
 				D9EBEC202896C1C2005C0D49 /* AppDelegate.swift in Sources */,
 				D946132E289D9A3C00FBA5D5 /* CalendarView.swift in Sources */,
 				D9EBEC882896E95D005C0D49 /* ChooseYourTeamView.swift in Sources */,
@@ -901,9 +915,11 @@
 				07D4BFD528C7F0980052C4E8 /* String.swift in Sources */,
 				07BEDD7128E22A6700002818 /* ForgotPasswordView.swift in Sources */,
 				D9EBEC5B2896C516005C0D49 /* GetUserEmailView.swift in Sources */,
+				07A718D228E982C80092E4D9 /* AbsencesRepository.swift in Sources */,
 				075CEC3128D0F0DD0064C373 /* ProfileRepository.swift in Sources */,
 				07D4BFC928C7E8230052C4E8 /* EndPoint.swift in Sources */,
 				07D4BFC728C7E8120052C4E8 /* Environment.swift in Sources */,
+				07A718D028E982B60092E4D9 /* AbsencesViewModel.swift in Sources */,
 				076D997828CF88B800F1142D /* ScheduleViewModel.swift in Sources */,
 				07D4BFA528C33CD30052C4E8 /* MyScheduleViewController.swift in Sources */,
 				D9EBEC8A2896E977005C0D49 /* ChooseYourTeamViewController.swift in Sources */,
@@ -1083,7 +1099,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;
@@ -1115,7 +1131,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YC74J4G7AA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLine/Info.plist;

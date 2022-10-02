@@ -44,4 +44,15 @@ class AbsencesView: UIView {
         addButton.setBorderColor(color: UIColor(0x8CB03E))
     }
     
+    func setAbsenceQuotaView(_ quota: AbsenceQuota?) {
+        guard let quota = quota else {
+            return
+        }
+        allowedCountLabel.text = "\(quota.totalCount ?? 0) days"
+        usedCountLabel.text = "\(quota.used ?? 0) days"
+        bookedCountLabel.text = "\(quota.approved ?? 0) days"
+        requestedCountLabel.text = "\(quota.requested ?? 0) days"
+        leftCountLabel.text = "\(quota.remaining ?? 0) days"
+    }
+    
 }

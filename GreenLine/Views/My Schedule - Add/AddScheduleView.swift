@@ -41,10 +41,16 @@ class AddScheduleView: UIView {
     @IBOutlet weak var infoIcon: UIImageView!
     @IBOutlet weak var holidayCountLabel: UILabel!
     @IBOutlet weak var currentHolidayLabel: UILabel!
+    @IBOutlet weak var selectAbsenceBGView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fromDatePicker: UIDatePicker!
+    @IBOutlet weak var toDatePicker: UIDatePicker!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        fromDatePicker.alpha = 0.1
+        toDatePicker.alpha = 0.1
         bottomView.setCornerRadius(16, forCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
         bottomView.clipsToBounds = true
         [approveBGView, commentBGView, absenceTypeBGView, selectDatesBGView].forEach({

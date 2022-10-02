@@ -57,10 +57,9 @@ class ProfileView: UIView {
         lastNameTextField.text = user?.lastName
         phoneNumberTextField.text = user?.phoneNumber
         genderLabel.text = user?.gender
-//        passwordTextField.text = user?.password
         profileImageView.setBorderWidth(width: 1)
         profileImageView.setBorderColor(color: .textFieldBorderColor)
-        profileImageView.sd_setImage(with: URL(string: ""), placeholderImage: UIImage(named: "default_user_image"))
+        profileImageView.sd_setImage(with: URL(string: user?.profilePicture ?? ""), placeholderImage: UIImage(named: "default_user_image"))
         drivingLicenseSwitch.isOn = user?.drivingLiscense ?? false
         accessToCarSwitch.isOn = user?.carAccess ?? false
         emergencyContactName.text = user?.emergencyContact?.name ?? "None"

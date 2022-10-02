@@ -20,4 +20,11 @@ enum Endpoint {
     static var getAllShifts: URL? {
         URL(string: "Shift/GetAll", relativeTo: Environment.baseUrl)
     }
+    static var getAbsencesQuota: URL? {
+        URL(string: "Absence/GetQuota", relativeTo: Environment.baseUrl)
+    }
+    static var requestAbsence: URL? {
+        URL(string: "Absence/RequestAbsence", relativeTo: Environment.baseUrl)
+    }
+    
 }
