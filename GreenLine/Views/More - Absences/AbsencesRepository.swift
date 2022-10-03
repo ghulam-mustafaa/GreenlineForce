@@ -10,6 +10,7 @@ import Alamofire
 import ObjectMapper
 
 typealias AbsenceQuotaResult = (Result<AbsenceQuota, GreenlineError>)
+typealias AbsenceListResult = (Result<[Absence], GreenlineError>)
 
 class AbsencesRepository {
     func getAbsenceQuota(withCompletion completion: @escaping (AbsenceQuotaResult) -> Void) {
@@ -30,6 +31,30 @@ class AbsencesRepository {
                         return
                     }
                     completion(.success(quota))
+                case .failure(let error):
+                    completion(.failure(error))
+            }
+        })
+    }
+    
+    func getAbsences(fromDate: String, toDate: String, withCompletion completion: @escaping (AbsenceListResult) -> Void) {
+        APIClient.shared.performRequest(AbsencesRequest.getAbsences(fromDate: fromDate, toDate: toDate), shouldAddHeader: true, andCompletion: {(result: APIClientResult) in
+            switch result {
+                case .success(let value):
+                    print(value)
+                    guard let (headers, body) = value as? ([String: Any], [String: Any]) else {
+                        completion(.failure(GreenlineError(message: "Failed to parse data")))
+                        return
+                    }
+                    if let error = Mapper<GreenlineError>().map(JSONObject: body) {
+                        completion(.failure(error))
+                        return
+                    }
+                    guard let absenceList = Mapper<AbsenceList>().map(JSONObject: body) else {
+                        completion(.failure(GreenlineError(message: "Failed to parse data")))
+                        return
+                    }
+                    completion(.success(absenceList.absences ?? []))
                 case .failure(let error):
                     completion(.failure(error))
             }
@@ -65,6 +90,7 @@ class AbsencesRepository {
 
 enum AbsencesRequest: HTTPRequest {
     case getQuota
+    case getAbsences(fromDate: String, toDate: String)
     case requestAbsence(type: Int, fromDate: String, toDate: String, comment: String)
 }
 
@@ -73,11 +99,12 @@ extension AbsencesRequest {
         switch self {
             case .getQuota: return Endpoint.getAbsencesQuota
             case .requestAbsence: return Endpoint.requestAbsence
+            case .getAbsences: return Endpoint.getAbsences
         }
     }
     var method: HTTPMethod {
         switch self {
-            case .getQuota, .requestAbsence: return .post
+            case .getQuota, .requestAbsence, .getAbsences: return .post
         }
     }
     var parameters: Parameters? {
@@ -97,6 +124,14 @@ extension AbsencesRequest {
                     "To": toDate,
                     "Comment": comment,
                     "Status": 1
+                ]
+                return params
+            case .getAbsences(let fromDate, let toDate):
+                let params: Parameters? = [
+                    "uId": SessionManager.shared.user?.userId ?? -1,
+                    "uRole": 0,
+                    "From": fromDate,
+                    "To": toDate,
                 ]
                 return params
         }

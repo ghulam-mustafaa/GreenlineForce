@@ -11,6 +11,8 @@ class AbsencesViewModel {
     
     var absenceQuota: AbsenceQuota?
     var repository = AbsencesRepository()
+    var absences: [Absence] = []
+    
     
     var typeId: Int?
     var comment = ""
@@ -40,6 +42,19 @@ class AbsencesViewModel {
             (result) in
             switch result {
                 case .success(_):
+                    success()
+                case .failure(let error):
+                    failure(error)
+            }
+        })
+    }
+    
+    func getAbsences(fromDate: String, toDate: String, success: @escaping () -> Void, failure: @escaping failureCompletionHandler) {
+        repository.getAbsences(fromDate: fromDate, toDate: toDate, withCompletion: {
+            (result) in
+            switch result {
+                case .success(let absences):
+                    self.absences = absences
                     success()
                 case .failure(let error):
                     failure(error)

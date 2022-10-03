@@ -11,6 +11,21 @@ protocol RequestedAbsence {
     func absenceDidRequested()
 }
 
+enum AbsenceStatus: Int {
+    case requested = 1, approved, rejected
+    
+    var title: String {
+        switch self {
+            case .requested:
+                return "Requested"
+            case .approved:
+                return "Approved"
+            case .rejected:
+                return "Rejected"
+        }
+    }
+}
+
 class AbsencesViewController: BaseViewController {
 
     @IBOutlet var absencesView: AbsencesView!
@@ -20,7 +35,27 @@ class AbsencesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        absencesView.tableView.delegate = self
+        absencesView.tableView.dataSource = self
         getAbsenceQuota()
+        getAllAbsences()
+    }
+    
+    func getAllAbsences() {
+        LoaderManager.show(view)
+        var components = Calendar.current.dateComponents([.year], from: Date())
+        if let startDateOfYear = Calendar.current.date(from: components) {
+            components.year = 1
+            components.day = -1
+            let lastDateOfYear = Calendar.current.date(byAdding: components, to: startDateOfYear) ?? Date()
+            viewModel.getAbsences(fromDate: startDateOfYear.sendBirthdayString, toDate: lastDateOfYear.sendBirthdayString, success: {
+                LoaderManager.hide(self.view)
+                self.absencesView.tableView.reloadData()
+            }, failure: { error in
+                LoaderManager.hide(self.view)
+                Utils.showErrorDialog(withError: error, controller: self)
+            })
+        }
     }
     
     func getAbsenceQuota() {
@@ -53,5 +88,27 @@ extension AbsencesViewController: RequestedAbsence {
     func absenceDidRequested() {
         dismiss(animated: true)
         getAbsenceQuota()
+        getAllAbsences()
     }
+}
+
+extension AbsencesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
+extension AbsencesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.absences.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: AbsenceTableViewCell = tableView.dequeueCell(for: indexPath)
+        let absence = viewModel.absences[indexPath.row]
+        cell.setupAbsenceData(absence)
+        return cell
+    }
+    
+    
 }

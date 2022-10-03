@@ -26,5 +26,8 @@ enum Endpoint {
     static var requestAbsence: URL? {
         URL(string: "Absence/RequestAbsence", relativeTo: Environment.baseUrl)
     }
+    static var getAbsences: URL? {
+        URL(string: "Absence/GetAbsences", relativeTo: Environment.baseUrl)
+    }
     
 }

@@ -34,14 +34,27 @@ class AbsencesView: UIView {
     @IBOutlet weak var leftBGView: UIView!
     @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var leftCountLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        tableView.separatorStyle = .none
         absenceTypeStackView.setBorderColor(color: .textFieldBorderColor)
         absenceTypeStackView.setBorderWidth(width: 1)
         addButton.setBorderWidth(width: 1)
         addButton.setBorderColor(color: UIColor(0x8CB03E))
+        var components = Calendar.current.dateComponents([.year], from: Date())
+        if let date = Calendar.current.date(from: components) {
+            components.day = 1
+            components.year = 0
+            let startDateOfYear = Calendar.current.date(byAdding: components, to: date) ?? Date()
+            components.year = 1
+            components.day = -1
+            let lastDateOfYear = Calendar.current.date(byAdding: components, to: date) ?? Date()
+            dateRangeLabel.text = "\(startDateOfYear.birthdayString) - \(lastDateOfYear.birthdayString)"
+            yearLabel.text = "\(Calendar.current.component(.year, from: Date()))"
+        }
     }
     
     func setAbsenceQuotaView(_ quota: AbsenceQuota?) {

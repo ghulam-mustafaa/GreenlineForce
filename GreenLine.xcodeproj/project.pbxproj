@@ -19,6 +19,8 @@
 		07A718D228E982C80092E4D9 /* AbsencesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D128E982C80092E4D9 /* AbsencesRepository.swift */; };
 		07A718D428E9844F0092E4D9 /* AbsenceQuota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */; };
 		07A718D628E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */; };
+		07A718E428EB7E9C0092E4D9 /* AbsenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718E328EB7E9C0092E4D9 /* AbsenceTableViewCell.swift */; };
+		07A718E628EB80500092E4D9 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718E528EB80500092E4D9 /* Absence.swift */; };
 		07BEDD6F28E22A3A00002818 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */; };
 		07BEDD7128E22A6700002818 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */; };
 		07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BF9E28C141080052C4E8 /* BaseViewController.swift */; };
@@ -125,6 +127,8 @@
 		07A718D128E982C80092E4D9 /* AbsencesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesRepository.swift; sourceTree = "<group>"; };
 		07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceQuota.swift; sourceTree = "<group>"; };
 		07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAbsenceTableViewCell.swift; sourceTree = "<group>"; };
+		07A718E328EB7E9C0092E4D9 /* AbsenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceTableViewCell.swift; sourceTree = "<group>"; };
+		07A718E528EB80500092E4D9 /* Absence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absence.swift; sourceTree = "<group>"; };
 		07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		07D4BF9E28C141080052C4E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 				07D4BFEB28CA66A20052C4E8 /* AbsencesView.swift */,
 				07A718CF28E982B60092E4D9 /* AbsencesViewModel.swift */,
 				07A718D128E982C80092E4D9 /* AbsencesRepository.swift */,
+				07A718E328EB7E9C0092E4D9 /* AbsenceTableViewCell.swift */,
 			);
 			path = "More - Absences";
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 				07D4BFF928CCD37F0052C4E8 /* GreenlineUser.swift */,
 				076D997B28CF97B000F1142D /* Shift.swift */,
 				07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */,
+				07A718E528EB80500092E4D9 /* Absence.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -883,6 +889,8 @@
 				D9EBEC8C2896E9BD005C0D49 /* ChooseYourTeamTableViewCell.swift in Sources */,
 				07D4BFF328CA89BB0052C4E8 /* PayTableViewCell.swift in Sources */,
 				075CEC3828D0FDA60064C373 /* ShiftDetailViewController.swift in Sources */,
+				07A718E428EB7E9C0092E4D9 /* AbsenceTableViewCell.swift in Sources */,
+				07A718E628EB80500092E4D9 /* Absence.swift in Sources */,
 				D9461311289AE2AB00FBA5D5 /* EnterPasswordViewController.swift in Sources */,
 				07D4BFD128C7EEBA0052C4E8 /* Utils.swift in Sources */,
 				07D4BFD328C7F02A0052C4E8 /* UserEmailViewModel.swift in Sources */,
