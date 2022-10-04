@@ -12,7 +12,7 @@ class ScheduleViewController: BaseViewController {
     @IBOutlet var scheduleView: ScheduleView!
     
     var currentMonth = Date().startOfMonth?.toLocalTime()
-    var selectedDate = Date().toLocalTime()
+    var selectedDate = Date().iso8601
     var viewModel = ScheduleViewModel()
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class ScheduleViewController: BaseViewController {
     
     private func getAllShifts() {
         LoaderManager.show(view)
-        viewModel.getUserProfile(success: {
+        viewModel.getAllShifts(date: selectedDate, success: {
             LoaderManager.hide(self.view)
             self.scheduleView.showEmptyView(self.viewModel.shifts.isEmpty)
             self.scheduleView.tableView.reloadData()
@@ -74,8 +74,9 @@ extension ScheduleViewController: UITableViewDataSource {
 
 extension ScheduleViewController: CalendarViewDelegate {
     func calendarView(_: CalendarView, didSelectDate date: Date) {
-        selectedDate = date.toLocalTime()
-        scheduleView.monthNameLabel.text = selectedDate.formatDate()
+        selectedDate = date.iso8601
+        scheduleView.monthNameLabel.text = selectedDate.date?.formatDate()
+        getAllShifts()
     }
     
     func calendarView(_: CalendarView, didChangeMonth date: Date) {

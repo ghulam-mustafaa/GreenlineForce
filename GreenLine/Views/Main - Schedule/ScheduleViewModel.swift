@@ -20,8 +20,8 @@ class ScheduleViewModel {
     var shiftsForLocation: [Int: [Shift]] = [:]
     private var repository = ScheduleRepository()
     
-    func getUserProfile(success: @escaping () -> Void, failure: @escaping failureCompletionHandler) {
-        repository.getAllShifts(from: Date().iso8601, toDate: Date().iso8601, pageNo: 1, searchText: "", withCompletion: { (result) in
+    func getAllShifts(date: String, success: @escaping () -> Void, failure: @escaping failureCompletionHandler) {
+        repository.getAllShifts(from: date, toDate: date, pageNo: 1, searchText: "", withCompletion: { (result) in
             switch result {
                 case .success(let shifts):
                     self.shifts = shifts

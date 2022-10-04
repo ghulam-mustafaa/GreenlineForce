@@ -12,6 +12,7 @@ class ProfileViewController: BaseViewController {
     @IBOutlet var profileView: ProfileView!
     
     var viewModel = ProfileViewModel()
+    var profileImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,51 @@ class ProfileViewController: BaseViewController {
         })
     }
     
-    @IBAction func birthdayDateChanged(_ sender: UIDatePicker) {
+    private func openImagePickerViewController(forGallery openGallery: Bool) {
+        if openGallery {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = false
+            imagePickerController.mediaTypes = ["public.image"]
+            present(imagePickerController, animated: true, completion: nil)
+        } else {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = .camera
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = false
+            imagePickerController.mediaTypes = ["public.image"]
+            self.present(imagePickerController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction
+    func cancelOptionsButtonAction(_ sender: UIButton) {
+        profileView.cameraOptionsBGView.isHidden = true
+    }
+    
+    @IBAction
+    func galleryButtonAction(_ sender: UIButton) {
+        openImagePickerViewController(forGallery: true)
+        profileView.cameraOptionsBGView.isHidden = true
+    }
+    
+    @IBAction
+    func cameraButtonAction(_ sender: UIButton) {
+        openImagePickerViewController(forGallery: false)
+        profileView.cameraOptionsBGView.isHidden = true
+    }
+    
+    @IBAction
+    func birthdayDateChanged(_ sender: UIDatePicker) {
         viewModel.birthdate = sender.date.sendBirthdayString
         profileView.birthdayTextField.text = sender.date.birthdayString
+    }
+    
+    @IBAction
+    func selectProfilePictureButtonAction(_ sender: UIButton) {
+        profileView.cameraOptionsBGView.isHidden = false
     }
     
     @IBAction
@@ -119,5 +162,21 @@ extension ProfileViewController: UITextFieldDelegate {
             }
         }
         return true
+    }
+}
+
+// MARK: - UIImagePicker Controller Delegate
+
+extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage  {
+            profileImage = selectedImage
+        }
+        dismiss(animated: true)
     }
 }

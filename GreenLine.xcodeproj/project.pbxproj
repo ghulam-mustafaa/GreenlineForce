@@ -21,6 +21,10 @@
 		07A718D628E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */; };
 		07A718E428EB7E9C0092E4D9 /* AbsenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718E328EB7E9C0092E4D9 /* AbsenceTableViewCell.swift */; };
 		07A718E628EB80500092E4D9 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718E528EB80500092E4D9 /* Absence.swift */; };
+		07B1FCB928ECC2F3002D4A5D /* ShiftInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1FCB828ECC2F3002D4A5D /* ShiftInfoViewController.swift */; };
+		07B1FCBB28ECC327002D4A5D /* ShiftInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1FCBA28ECC327002D4A5D /* ShiftInfoView.swift */; };
+		07B1FCBD28ECC3DF002D4A5D /* ShiftDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1FCBC28ECC3DF002D4A5D /* ShiftDetailTableViewCell.swift */; };
+		07B1FCBF28ECC3F4002D4A5D /* ShiftDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1FCBE28ECC3F4002D4A5D /* ShiftDetailHeaderTableViewCell.swift */; };
 		07BEDD6F28E22A3A00002818 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */; };
 		07BEDD7128E22A6700002818 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */; };
 		07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D4BF9E28C141080052C4E8 /* BaseViewController.swift */; };
@@ -129,6 +133,10 @@
 		07A718D528E9AF6A0092E4D9 /* SelectAbsenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAbsenceTableViewCell.swift; sourceTree = "<group>"; };
 		07A718E328EB7E9C0092E4D9 /* AbsenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceTableViewCell.swift; sourceTree = "<group>"; };
 		07A718E528EB80500092E4D9 /* Absence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absence.swift; sourceTree = "<group>"; };
+		07B1FCB828ECC2F3002D4A5D /* ShiftInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftInfoViewController.swift; sourceTree = "<group>"; };
+		07B1FCBA28ECC327002D4A5D /* ShiftInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftInfoView.swift; sourceTree = "<group>"; };
+		07B1FCBC28ECC3DF002D4A5D /* ShiftDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftDetailTableViewCell.swift; sourceTree = "<group>"; };
+		07B1FCBE28ECC3F4002D4A5D /* ShiftDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		07BEDD6E28E22A3900002818 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		07BEDD7028E22A6700002818 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		07D4BF9E28C141080052C4E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +258,17 @@
 				075CEC3728D0FDA60064C373 /* ShiftDetailViewController.swift */,
 			);
 			path = "Schedule - Shift Detail";
+			sourceTree = "<group>";
+		};
+		07B1FCB728ECC2DE002D4A5D /* Shift Info */ = {
+			isa = PBXGroup;
+			children = (
+				07B1FCB828ECC2F3002D4A5D /* ShiftInfoViewController.swift */,
+				07B1FCBA28ECC327002D4A5D /* ShiftInfoView.swift */,
+				07B1FCBC28ECC3DF002D4A5D /* ShiftDetailTableViewCell.swift */,
+				07B1FCBE28ECC3F4002D4A5D /* ShiftDetailHeaderTableViewCell.swift */,
+			);
+			path = "Shift Info";
 			sourceTree = "<group>";
 		};
 		07BEDD6D28E2299C00002818 /* Login - Forgot Password */ = {
@@ -510,6 +529,7 @@
 		D9EBEC512896C3C2005C0D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07B1FCB728ECC2DE002D4A5D /* Shift Info */,
 				07BEDD6D28E2299C00002818 /* Login - Forgot Password */,
 				075CEC3428D0FD6C0064C373 /* Schedule - Shift Detail */,
 				07D4BFFB28CDCECC0052C4E8 /* Splash */,
@@ -879,10 +899,12 @@
 				07D4BF9F28C141080052C4E8 /* BaseViewController.swift in Sources */,
 				D9EBEC852896D6E5005C0D49 /* UIColor.swift in Sources */,
 				D946131F289B066400FBA5D5 /* ScheduleTableViewCell.swift in Sources */,
+				07B1FCBB28ECC327002D4A5D /* ShiftInfoView.swift in Sources */,
 				075CEC3328D0F6B40064C373 /* ProfileViewModel.swift in Sources */,
 				07D4BFEC28CA66A20052C4E8 /* AbsencesView.swift in Sources */,
 				07A718D428E9844F0092E4D9 /* AbsenceQuota.swift in Sources */,
 				D9EBEC202896C1C2005C0D49 /* AppDelegate.swift in Sources */,
+				07B1FCB928ECC2F3002D4A5D /* ShiftInfoViewController.swift in Sources */,
 				D946132E289D9A3C00FBA5D5 /* CalendarView.swift in Sources */,
 				D9EBEC882896E95D005C0D49 /* ChooseYourTeamView.swift in Sources */,
 				07D4BFAE28C33D240052C4E8 /* ShiftsViewController.swift in Sources */,
@@ -910,6 +932,7 @@
 				07D4BFF828CCBAC10052C4E8 /* ProfileViewController.swift in Sources */,
 				07D4BFBF28C7E0870052C4E8 /* GreenlineError.swift in Sources */,
 				076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */,
+				07B1FCBF28ECC3F4002D4A5D /* ShiftDetailHeaderTableViewCell.swift in Sources */,
 				07D4BFCB28C7E94A0052C4E8 /* UserSessionData.swift in Sources */,
 				07D4BFAA28C33D070052C4E8 /* MoreView.swift in Sources */,
 				D9461316289AF83800FBA5D5 /* MainTabBarView.swift in Sources */,
@@ -935,6 +958,7 @@
 				07D4BFB228C33D490052C4E8 /* ShiftsTableViewCell.swift in Sources */,
 				07D4BFE328C9C5B80052C4E8 /* AddScheduleViewController.swift in Sources */,
 				D9EBEC8E2896EBEA005C0D49 /* UITableVewCell.swift in Sources */,
+				07B1FCBD28ECC3DF002D4A5D /* ShiftDetailTableViewCell.swift in Sources */,
 				D946131D289B061500FBA5D5 /* ScheduleView.swift in Sources */,
 				07D4BFFD28CDCEE70052C4E8 /* SplashViewController.swift in Sources */,
 			);

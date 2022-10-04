@@ -11,6 +11,7 @@ import UIKit
 
 class ProfileView: UIView {
 
+    @IBOutlet weak var cameraOptionsBGView: UIView!
     @IBOutlet weak var profileBGView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var profileLabel: UILabel!
@@ -59,7 +60,7 @@ class ProfileView: UIView {
         genderLabel.text = user?.gender
         profileImageView.setBorderWidth(width: 1)
         profileImageView.setBorderColor(color: .textFieldBorderColor)
-        profileImageView.sd_setImage(with: URL(string: user?.profilePicture ?? ""), placeholderImage: UIImage(named: "default_user_image"))
+        profileImageView.sd_setImage(with: URL(string: user?.profilePictureUrl ?? ""), placeholderImage: UIImage(named: "default_user_image"))
         drivingLicenseSwitch.isOn = user?.drivingLiscense ?? false
         accessToCarSwitch.isOn = user?.carAccess ?? false
         emergencyContactName.text = user?.emergencyContact?.name ?? "None"

@@ -12,7 +12,7 @@ class MyScheduleViewController: BaseViewController {
     @IBOutlet var scheduleView: MyScheduleView!
     
     var currentMonth = Date().startOfMonth?.toLocalTime()
-    var selectedDate = Date().toLocalTime()
+    var selectedDate = Date().iso8601
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class MyScheduleViewController: BaseViewController {
     @IBAction
     func listButtonAction(_ sender: UIButton) {
     }
+    
     @IBAction
     func addScheduleButtonAction(_ sender: UIButton) {
         let vc = AddScheduleViewController.instantiate(from: .Main)
@@ -36,8 +37,8 @@ class MyScheduleViewController: BaseViewController {
 
 extension MyScheduleViewController: CalendarViewDelegate {
     func calendarView(_: CalendarView, didSelectDate date: Date) {
-        selectedDate = date.toLocalTime()
-        scheduleView.monthNameLabel.text = selectedDate.formatDate()
+        selectedDate = date.iso8601
+        scheduleView.monthNameLabel.text = selectedDate.date?.formatDate()
     }
     
     func calendarView(_: CalendarView, didChangeMonth date: Date) {

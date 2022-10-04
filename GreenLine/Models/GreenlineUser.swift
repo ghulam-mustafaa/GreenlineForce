@@ -22,6 +22,7 @@ class GreenlineUser: Mappable {
     var mobileNumber: String?
     var doB: String?
     var profilePicture: String?
+    var profilePictureUrl: String?
     
     required init?(map: Map) {}
     
@@ -39,6 +40,7 @@ class GreenlineUser: Mappable {
         mobileNumber <- map["MobileNumber"]
         doB <- map["DoB"]
         profilePicture <- map["ProfilePicture"]
+        profilePictureUrl <- map["ProfilePitureUrl"]
     }
 }
 
