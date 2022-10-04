@@ -34,14 +34,16 @@ extension Date {
         }()
         static let birthdate: DateFormatter = {
             let formatter = DateFormatter()
+//            formatter.locale = Locale(identifier: "en_US_POSIX")
+//            formatter.timeZone = TimeZone(secondsFromGMT: 0)
             formatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss"
             return formatter
         }()
         static let birthday: DateFormatter = {
             let formatter = DateFormatter()
             formatter.calendar = Calendar(identifier: Calendar.Identifier.iso8601)
-            formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+//            formatter.locale = Locale(identifier: "en_US_POSIX")
+//            formatter.timeZone = TimeZone(secondsFromGMT: 0)
             formatter.dateFormat = "dd MMM yyyy"
             return formatter
         }()
