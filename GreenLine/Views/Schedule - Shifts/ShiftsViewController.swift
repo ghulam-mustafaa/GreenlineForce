@@ -33,7 +33,12 @@ class ShiftsViewController: BaseViewController {
 
 extension ShiftsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO
+        let shift = isFromSchedule ? viewModel.shifts[indexPath.row] : nil
+        let vc = ShiftInfoViewController.instantiate(from: .Main)
+        vc.shift = shift
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

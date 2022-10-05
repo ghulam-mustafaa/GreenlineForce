@@ -2942,6 +2942,11 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Cancel Shift"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelShiftButtonAction:" destination="Hgq-kT-Rd8" eventType="touchUpInside" id="ltB-at-6fk"/>
                                         </connections>
@@ -2961,26 +2966,26 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euA-oa-L23">
-                                                                    <rect key="frame" x="24" y="34" width="40" height="40"/>
+                                                                    <rect key="frame" x="24" y="38" width="32" height="32"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="P7T-aU-bcv"/>
+                                                                        <constraint firstAttribute="height" constant="32" id="P7T-aU-bcv"/>
                                                                         <constraint firstAttribute="width" secondItem="euA-oa-L23" secondAttribute="height" multiplier="1:1" id="yhv-Vo-QTb"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uu8-N6-cd3">
-                                                                    <rect key="frame" x="80" y="44" width="73.5" height="20"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                                    <rect key="frame" x="72" y="45.5" width="64.5" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                                     <color key="textColor" red="0.12549019610000001" green="0.16078431369999999" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Shift Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7Z-7J-1jQ">
-                                                                    <rect key="frame" x="169.5" y="45.5" width="228.5" height="17.5"/>
+                                                                    <rect key="frame" x="152.5" y="45.5" width="245.5" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                                     <color key="textColor" red="0.12549019610000001" green="0.16078431369999999" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybJ-g7-E6f">
-                                                                    <rect key="frame" x="80" y="107" width="334" height="1"/>
+                                                                    <rect key="frame" x="72" y="107" width="342" height="1"/>
                                                                     <color key="backgroundColor" systemColor="separatorColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="xuS-fw-dKz"/>

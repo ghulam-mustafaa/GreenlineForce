@@ -50,6 +50,22 @@ class ProfileViewController: BaseViewController {
         }
     }
     
+    func uploadImage(imageData: Data) {
+        LoaderManager.show(view)
+        viewModel.uploadImage(with: imageData, success: {
+            self.viewModel.getUserProfile(success: {
+                LoaderManager.hide(self.view)
+                self.profileView.setupProfileData()
+            }, failure: {_ in
+                LoaderManager.hide(self.view)
+                Utils.showOkAlert(title: "Error", message: "Could not load profile image", viewController: self)
+            })
+        }, failure: { error in
+            LoaderManager.hide(self.view)
+            Utils.showErrorDialog(withError: error, controller: self)
+        })
+    }
+    
     @IBAction
     func cancelOptionsButtonAction(_ sender: UIButton) {
         profileView.cameraOptionsBGView.isHidden = true
@@ -176,7 +192,13 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage  {
             profileImage = selectedImage
+            guard let data = selectedImage.pngData() else {
+                dismiss(animated: true)
+                return
+            }
+            uploadImage(imageData: data)
         }
         dismiss(animated: true)
     }
 }
+

@@ -37,6 +37,27 @@ class ProfileRepository {
             }
         }
     }
+    
+    func uploadImage(with data: Data, withCompletion completion: @escaping (ProfilePictureResult) -> Void) {
+        APIClient.shared.uploadImage(with: data, andCompletion: { (result: APIClientResult) in
+            switch result {
+                case .success(let value):
+                    print(value)
+                    guard let (headers, body) = value as? ([String: Any], [String: Any]) else {
+                        completion(.failure(GreenlineError(message: "Failed to parse data")))
+                        return
+                    }
+                    if let error = Mapper<GreenlineError>().map(JSONObject: body) {
+                        completion(.failure(error))
+                        return
+                    }
+                    completion(.success(nil))
+                case .failure(let error):
+                    completion(.failure(error))
+            }
+            
+        })
+    }
 }
 
 enum UpdateProfileRequest: HTTPRequest {

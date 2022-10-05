@@ -40,7 +40,7 @@ class GreenlineUser: Mappable {
         mobileNumber <- map["MobileNumber"]
         doB <- map["DoB"]
         profilePicture <- map["ProfilePicture"]
-        profilePictureUrl <- map["ProfilePitureUrl"]
+        profilePictureUrl <- map["ProfilePictureUrl"]
     }
 }
 

@@ -20,21 +20,19 @@
                                 <rect key="frame" x="96" y="519.5" width="318" height="376.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qaG-5D-lu4">
-                                <rect key="frame" x="82" y="358" width="250" height="190"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="J4k-Lk-Fkz"/>
-                                    <constraint firstAttribute="height" constant="190" id="x5A-jX-IIc"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="340.5" width="334" height="225"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gqE-Li-CUJ" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.42" id="1Fr-n0-fBi"/>
+                            <constraint firstAttribute="trailing" secondItem="qaG-5D-lu4" secondAttribute="trailing" constant="40" id="1wg-EQ-SAG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqE-Li-CUJ" secondAttribute="trailing" id="BIF-q8-B9U"/>
                             <constraint firstItem="qaG-5D-lu4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UEa-IE-ehW"/>
                             <constraint firstItem="qaG-5D-lu4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eet-X7-p3T"/>
                             <constraint firstAttribute="bottom" secondItem="gqE-Li-CUJ" secondAttribute="bottom" id="meZ-Rl-J4u"/>
+                            <constraint firstItem="qaG-5D-lu4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="40" id="mo0-AI-9Wt"/>
                             <constraint firstItem="gqE-Li-CUJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="wV4-Rr-fxp"/>
                         </constraints>
                     </view>
@@ -46,6 +44,6 @@
     </scenes>
     <resources>
         <image name="splash_bottom_icon" width="317" height="384"/>
-        <image name="splash_logo" width="240.5" height="192"/>
+        <image name="splash_logo" width="450" height="225"/>
     </resources>
 </document>

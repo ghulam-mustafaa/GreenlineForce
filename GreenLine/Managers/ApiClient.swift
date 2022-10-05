@@ -87,4 +87,45 @@ class APIClient {
             }
         }
     }
+    
+    func uploadImage(with data: Data, andCompletion completion: @escaping (APIClientResult) -> Void) {
+        let url = URL(string: "http://149.102.130.63:8085/api/User/UploadProfilePicture")!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(UserDefaultsManager.accessToken)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        AF.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(data, withName: "file", fileName: "swift_file.png", mimeType: "image/png")
+        }, with: urlRequest).responseJSON(completionHandler: { response in
+            print(response)
+            if response.response?.statusCode == 401 {
+                completion(.failure(GreenlineError(message: "Email or password is incorrect")))
+                return
+            }
+            if response.response?.statusCode == 405 {
+                completion(.failure(GreenlineError(message: "Please register first")))
+                return
+            }
+            let headers = response.response?.allHeaderFields ?? [:]
+            switch response.result {
+                case .success(let value):
+                    completion(.success((headers: headers, body: value)))
+                case .failure(let error):
+                    guard let afError = error as? AFError else {
+                        completion(.failure(GreenlineError(message: error.errorDescription ??
+                                                           "Something went wrong")))
+                        return
+                    }
+                    switch afError {
+                        case .sessionTaskFailed( _):
+                            completion(.failure(GreenlineError(message: "Your internet connection appears to be offline")))
+                        default:
+                            completion(.failure(GreenlineError(message: afError.errorDescription ??
+                                                               "Something went wrong")))
+                    }
+                    
+            }
+        })
+    }
 }

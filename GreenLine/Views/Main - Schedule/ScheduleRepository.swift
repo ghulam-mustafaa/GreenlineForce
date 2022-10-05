@@ -10,6 +10,7 @@ import Alamofire
 import ObjectMapper
 
 typealias ScheduleResult = (Result<[Shift], GreenlineError>)
+typealias ProfilePictureResult = (Result<Any?, GreenlineError>)
 typealias AnsenceQuotaResult = (Result<AbsenceQuota, GreenlineError>)
 
 class ScheduleRepository {

@@ -13,15 +13,10 @@ class ShiftDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var detailIcon: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var shiftInfoLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    func setupData(icon: String, title: String, info: String?) {
+        detailIcon.image = UIImage(named: icon)
+        titleLabel.text = title
+        shiftInfoLabel.text = info ?? "---"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

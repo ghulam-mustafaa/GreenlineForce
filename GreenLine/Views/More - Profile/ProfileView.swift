@@ -60,6 +60,7 @@ class ProfileView: UIView {
         genderLabel.text = user?.gender
         profileImageView.setBorderWidth(width: 1)
         profileImageView.setBorderColor(color: .textFieldBorderColor)
+        profileImageView.sd_imageIndicator = SDWebImageActivityIndicator.large
         profileImageView.sd_setImage(with: URL(string: user?.profilePictureUrl ?? ""), placeholderImage: UIImage(named: "default_user_image"))
         drivingLicenseSwitch.isOn = user?.drivingLiscense ?? false
         accessToCarSwitch.isOn = user?.carAccess ?? false
