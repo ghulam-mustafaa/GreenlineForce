@@ -15,6 +15,7 @@
 		076D997A28CF892800F1142D /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997928CF892800F1142D /* ScheduleRepository.swift */; };
 		076D997C28CF97B000F1142D /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997B28CF97B000F1142D /* Shift.swift */; };
 		076D997E28CFB9B700F1142D /* ShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */; };
+		0797266128F6033000BFD2B1 /* CancelShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797266028F6033000BFD2B1 /* CancelShift.swift */; };
 		07A718D028E982B60092E4D9 /* AbsencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718CF28E982B60092E4D9 /* AbsencesViewModel.swift */; };
 		07A718D228E982C80092E4D9 /* AbsencesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D128E982C80092E4D9 /* AbsencesRepository.swift */; };
 		07A718D428E9844F0092E4D9 /* AbsenceQuota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */; };
@@ -127,6 +128,7 @@
 		076D997928CF892800F1142D /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		076D997B28CF97B000F1142D /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		076D997D28CFB9B700F1142D /* ShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsViewModel.swift; sourceTree = "<group>"; };
+		0797266028F6033000BFD2B1 /* CancelShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelShift.swift; sourceTree = "<group>"; };
 		07A718CF28E982B60092E4D9 /* AbsencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesViewModel.swift; sourceTree = "<group>"; };
 		07A718D128E982C80092E4D9 /* AbsencesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsencesRepository.swift; sourceTree = "<group>"; };
 		07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceQuota.swift; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 				076D997B28CF97B000F1142D /* Shift.swift */,
 				07A718D328E9844F0092E4D9 /* AbsenceQuota.swift */,
 				07A718E528EB80500092E4D9 /* Absence.swift */,
+				0797266028F6033000BFD2B1 /* CancelShift.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 				07D4BFC528C7E75E0052C4E8 /* LoginRepository.swift in Sources */,
 				D946132F289D9A3C00FBA5D5 /* DateCollectionViewCell.swift in Sources */,
 				07D4C00328CDD5750052C4E8 /* LoaderManager.swift in Sources */,
+				0797266128F6033000BFD2B1 /* CancelShift.swift in Sources */,
 				075CEC3628D0FD950064C373 /* ShiftDetailView.swift in Sources */,
 				07BEDD6F28E22A3A00002818 /* ForgotPasswordViewController.swift in Sources */,
 				D9EBEC592896C4FF005C0D49 /* GetUserEmailViewController.swift in Sources */,

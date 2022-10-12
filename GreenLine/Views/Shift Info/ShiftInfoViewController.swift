@@ -12,11 +12,12 @@ enum ShiftInfoTableViewCell: Int {
          assignee, pay, rate, totalPay, empty, notes, clockHistory
 }
 
-class ShiftInfoViewController: UIViewController {
+class ShiftInfoViewController: BaseViewController {
 
     @IBOutlet var infoView: ShiftInfoView!
     
     var shift: Shift?
+    var viewModel = ScheduleViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,14 @@ class ShiftInfoViewController: UIViewController {
     
     @IBAction
     func cancelShiftButtonAction(_ sender: UIButton) {
+        LoaderManager.show(view)
+        viewModel.cancelShift(id: shift?.id, success: {
+            LoaderManager.hide(self.view)
+            self.navigationController?.popViewController(animated: true)
+        }, failure: { error in
+            LoaderManager.hide(self.view)
+            Utils.showErrorDialog(withError: error, controller: self)
+        })
     }
 }
 

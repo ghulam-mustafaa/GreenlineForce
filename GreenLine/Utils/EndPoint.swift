@@ -29,5 +29,7 @@ enum Endpoint {
     static var getAbsences: URL? {
         URL(string: "Absence/GetAbsences", relativeTo: Environment.baseUrl)
     }
-    
+    static var cancelShift: (Int) -> URL? = {
+        URL(string: "Shift/Delete?id=\($0)", relativeTo: Environment.baseUrl)
+    }
 }

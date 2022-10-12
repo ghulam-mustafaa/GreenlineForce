@@ -89,7 +89,7 @@ class APIClient {
     }
     
     func uploadImage(with data: Data, andCompletion completion: @escaping (APIClientResult) -> Void) {
-        let url = URL(string: "http://149.102.130.63:8085/api/User/UploadProfilePicture")!
+        let url = URL(string: "https://api.greenlineforce.com/api/User/UploadProfilePicture")!
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")

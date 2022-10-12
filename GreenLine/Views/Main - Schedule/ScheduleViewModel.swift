@@ -41,4 +41,15 @@ class ScheduleViewModel {
             }
         })
     }
+    
+    func cancelShift(id: Int?, success: @escaping () -> Void, failure: @escaping failureCompletionHandler) {
+        repository.cancelShift(id: id, withCompletion: { (result) in
+            switch result {
+                case .success(let _):
+                    success()
+                case .failure(let error):
+                    failure(error)
+            }
+        })
+    }
 }
