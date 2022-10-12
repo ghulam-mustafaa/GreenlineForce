@@ -18,6 +18,7 @@ class ShiftInfoViewController: BaseViewController {
     
     var shift: Shift?
     var viewModel = ScheduleViewModel()
+    var delegate: PopViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,9 @@ class ShiftInfoViewController: BaseViewController {
         LoaderManager.show(view)
         viewModel.cancelShift(id: shift?.id, success: {
             LoaderManager.hide(self.view)
-            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: false, completion: {
+                self.delegate?.viewControllerDidPopped()
+            })
         }, failure: { error in
             LoaderManager.hide(self.view)
             Utils.showErrorDialog(withError: error, controller: self)

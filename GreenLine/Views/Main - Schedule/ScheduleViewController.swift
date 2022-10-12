@@ -46,6 +46,7 @@ extension ScheduleViewController: UITableViewDelegate {
         vc.isFromSchedule = true
         vc.viewModel.shifts = viewModel.shiftsForLocation[location.id] ?? []
         vc.viewModel.location = location
+        vc.delegate = self
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
@@ -101,5 +102,11 @@ extension ScheduleViewController: UITextFieldDelegate {
         scheduleView.showEmptyView(viewModel.searchedLocations.isEmpty)
         scheduleView.tableView.reloadData()
         return true
+    }
+}
+
+extension ScheduleViewController: PopViewControllerDelegate {
+    func viewControllerDidPopped() {
+        getAllShifts()
     }
 }

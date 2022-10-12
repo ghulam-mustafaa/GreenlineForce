@@ -25,4 +25,10 @@ class MyScheduleView: UIView {
         
         scheduleBottomView.setCornerRadius(16, forCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
     }
+    
+    func showEmptyView(_ shouldShow: Bool) {
+        noScheduleIcon.isHidden = !shouldShow
+        noScheduleLabel.isHidden = !shouldShow
+        tableView.isHidden = shouldShow
+    }
 }

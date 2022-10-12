@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol PopViewControllerDelegate {
+    func viewControllerDidPopped()
+}
+
 class ShiftsViewController: BaseViewController {
 
     @IBOutlet var shiftsView: ShiftsView!
     
     var isFromSchedule = false
     var viewModel = ShiftsViewModel()
+    var delegate: PopViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,7 @@ extension ShiftsViewController: UITableViewDelegate {
         let shift = isFromSchedule ? viewModel.shifts[indexPath.row] : nil
         let vc = ShiftInfoViewController.instantiate(from: .Main)
         vc.shift = shift
+        vc.delegate = self
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
@@ -62,6 +68,14 @@ extension ShiftsViewController: UITableViewDataSource {
             cell.shiftsCountLabel.text = "\(positionCount)"
         }
         return cell
+    }
+}
+
+extension ShiftsViewController: PopViewControllerDelegate {
+    func viewControllerDidPopped() {
+        dismiss(animated: true, completion: {
+            self.delegate?.viewControllerDidPopped()
+        })
     }
 }
 
