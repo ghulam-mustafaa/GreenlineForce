@@ -12,12 +12,6 @@ class SessionManager {
     static let shared = SessionManager()
     
     private init() {
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(expireSession),
-//            name: .sessionExpired,
-//            object: nil
-//        )
     }
     
     // MARK: Properties
@@ -30,21 +24,12 @@ class SessionManager {
     // MARK: - Public Methods
     
     public func loadSession(){
-//        self.user = LevelUpUser(JSON: UserDefaultsManager.user)
-//        guard let _ =  self.user?.accessToken else {
-//            self.user = nil
-//            return
-//        }
     }
     
     public func saveUser(user: GreenlineUser){
         self.user = user
         UserDefaultsManager.user = user.toJSON()
     }
-    
-//    public func updateUser(){
-//        UserDefaultsManager.user = user?.toJSON() ?? [:]
-//    }
     
     public func logout(){
         UserDefaultsManager.user = [:]
@@ -54,8 +39,6 @@ class SessionManager {
     
     @objc
     func expireSession(){
-//        GoalsRepository.goalsPlan = nil
-//        GoalsRepository.goalsProgress = nil
         logout()
         let loginViewController = Utils.showLoginScreen()
     }
